@@ -208,6 +208,8 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\frmNhap.datasource" />
+    <None Include="Properties\DataSources\Nhap.datasource" />
     <None Include="Properties\DataSources\Nhapkho.datasource" />
     <None Include="Properties\DataSources\Xuatkho.datasource" />
     <None Include="Properties\Settings.settings">
@@ -220,7 +222,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

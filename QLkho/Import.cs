@@ -34,17 +34,17 @@ namespace QLkho
                     {
                         Nhap nhap1 = new Nhap();
                         nhap1.sohd = dt.Rows[i]["Số hóa đơn"].ToString();
-                        nhap1.mavt = dt.Rows[i]["Mã vật tư"].ToString();
-                        nhap1.losx = dt.Rows[i]["Lô sản xuất"].ToString();
-                        nhap1.vitri = dt.Rows[i]["Vị trí"].ToString();
+                        nhap1.mavt = dt.Rows[i]["Mã hàng"].ToString();
+                        nhap1.barcodenhap = dt.Rows[i]["Barcode"].ToString();
                         nhap1.slnhap = dt.Rows[i]["Số lượng nhập"].ToString();
-                        nhap1.dgnhap = dt.Rows[i]["Đơn giá nhập (VNĐ)"].ToString();
-                        nhap1.ngaynhap = dt.Rows[i]["Ngày nhập"].ToString();
-                        nhap1.manv = dt.Rows[i]["Mã nhân viên"].ToString();
-                        nhap1.nguoinhap = dt.Rows[i]["Người nhập kho"].ToString();
+                        nhap1.dvt = dt.Rows[i]["Đơn vị tính"].ToString();
+                        nhap1.ngaynhap = Convert.ToDateTime(dt.Rows[i]["Ngày nhập"].ToString()).ToString("yyyy/dd/MM HH:mm:ss");                        
+                        nhap1.manv = dt.Rows[i]["Người nhập"].ToString();
+                        nhap1.dvgiaonhan = dt.Rows[i]["Đơn vị giao nhận"].ToString();
+                        nhap1.ghichu = dt.Rows[i]["Ghi chú"].ToString();
                         nhap.Add(nhap1);
                     }
-                    nhapkhoBindingSource.DataSource = nhap;
+                    nhapBindingSource1.DataSource = nhap;
                 }
             }catch
             {
@@ -90,9 +90,9 @@ namespace QLkho
         {
             try
             {
-                string conn = "Data Source=192.168.1.53,1433;Initial Catalog=QLKhoIT;User ID=sa;Password=123456789";
+                string conn = "Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789";
                 DapperPlusManager.Entity<Nhap>().Table("NhapKho");
-                List<Nhap> nhaps = nhapkhoBindingSource.DataSource as List<Nhap>;
+                List<Nhap> nhaps = nhapBindingSource1.DataSource as List<Nhap>;
                 if (nhaps != null)
                 {
                     using (IDbConnection db = new SqlConnection(conn))
@@ -106,7 +106,7 @@ namespace QLkho
                     this.Close();
                 }    
             }
-            catch
+            catch 
             {
                 XtraMessageBox.Show("Có lỗi xảy ra!. Không thể Import vào CSDL!. Lưu ý thoát file excel trước khi import và số hóa đơn không được trùng trong CSDL!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

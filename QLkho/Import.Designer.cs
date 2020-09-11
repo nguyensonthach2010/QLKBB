@@ -46,64 +46,25 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sohd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mavt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.losx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vitri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barcodenhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slnhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgnhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaynhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nguoinhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acceptButtonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoScrollDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.autoSizeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.autoSizeModeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoValidateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backColorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formBorderStyleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cancelButtonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.controlBoxDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.helpButtonDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.isMdiContainerDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.keyPreviewDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maximumSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mainMenuStripDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minimumSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maximizeBoxDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.minimizeBoxDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.opacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.showInTaskbarDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeGripStyleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.topMostDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.transparencyKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.windowStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoScrollMarginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoScrollMinSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accessibleDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accessibleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accessibleRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allowDropDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.anchorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backgroundImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.backgroundImageLayoutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.causesValidationDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.contextMenuStripDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataBindingsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enabledDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.fontDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foreColorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rightToLeftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.useWaitCursorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.visibleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.paddingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeModeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgiaonhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sohdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mavtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barcodenhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slnhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaynhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgiaonhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhapBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.frmNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhapkhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -119,6 +80,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmNhapBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhapkhoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,6 +233,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -277,69 +242,26 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sohd,
             this.mavt,
-            this.losx,
-            this.vitri,
+            this.barcodenhap,
             this.slnhap,
-            this.dgnhap,
+            this.dvt,
             this.ngaynhap,
             this.manv,
-            this.nguoinhap,
-            this.acceptButtonDataGridViewTextBoxColumn,
-            this.autoScrollDataGridViewCheckBoxColumn,
-            this.autoSizeDataGridViewCheckBoxColumn,
-            this.autoSizeModeDataGridViewTextBoxColumn,
-            this.autoValidateDataGridViewTextBoxColumn,
-            this.backColorDataGridViewTextBoxColumn,
-            this.formBorderStyleDataGridViewTextBoxColumn,
-            this.cancelButtonDataGridViewTextBoxColumn,
-            this.controlBoxDataGridViewCheckBoxColumn,
-            this.helpButtonDataGridViewCheckBoxColumn,
-            this.isMdiContainerDataGridViewCheckBoxColumn,
-            this.keyPreviewDataGridViewCheckBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.maximumSizeDataGridViewTextBoxColumn,
-            this.mainMenuStripDataGridViewTextBoxColumn,
-            this.minimumSizeDataGridViewTextBoxColumn,
-            this.maximizeBoxDataGridViewCheckBoxColumn,
-            this.minimizeBoxDataGridViewCheckBoxColumn,
-            this.opacityDataGridViewTextBoxColumn,
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn,
-            this.showInTaskbarDataGridViewCheckBoxColumn,
-            this.sizeDataGridViewTextBoxColumn,
-            this.sizeGripStyleDataGridViewTextBoxColumn,
-            this.startPositionDataGridViewTextBoxColumn,
-            this.textDataGridViewTextBoxColumn,
-            this.topMostDataGridViewCheckBoxColumn,
-            this.transparencyKeyDataGridViewTextBoxColumn,
-            this.windowStateDataGridViewTextBoxColumn,
-            this.autoScrollMarginDataGridViewTextBoxColumn,
-            this.autoScrollMinSizeDataGridViewTextBoxColumn,
-            this.accessibleDescriptionDataGridViewTextBoxColumn,
-            this.accessibleNameDataGridViewTextBoxColumn,
-            this.accessibleRoleDataGridViewTextBoxColumn,
-            this.allowDropDataGridViewCheckBoxColumn,
-            this.anchorDataGridViewTextBoxColumn,
-            this.backgroundImageDataGridViewImageColumn,
-            this.backgroundImageLayoutDataGridViewTextBoxColumn,
-            this.causesValidationDataGridViewCheckBoxColumn,
-            this.contextMenuStripDataGridViewTextBoxColumn,
-            this.cursorDataGridViewTextBoxColumn,
-            this.dataBindingsDataGridViewTextBoxColumn,
-            this.dockDataGridViewTextBoxColumn,
-            this.enabledDataGridViewCheckBoxColumn,
-            this.fontDataGridViewTextBoxColumn,
-            this.foreColorDataGridViewTextBoxColumn,
-            this.rightToLeftDataGridViewTextBoxColumn,
-            this.tagDataGridViewTextBoxColumn,
-            this.useWaitCursorDataGridViewCheckBoxColumn,
-            this.visibleDataGridViewCheckBoxColumn,
-            this.paddingDataGridViewTextBoxColumn,
-            this.imeModeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.nhapkhoBindingSource;
+            this.dvgiaonhan,
+            this.ghichu,
+            this.sohdDataGridViewTextBoxColumn,
+            this.mavtDataGridViewTextBoxColumn,
+            this.barcodenhapDataGridViewTextBoxColumn,
+            this.slnhapDataGridViewTextBoxColumn,
+            this.dvtDataGridViewTextBoxColumn,
+            this.ngaynhapDataGridViewTextBoxColumn,
+            this.manvDataGridViewTextBoxColumn,
+            this.dvgiaonhanDataGridViewTextBoxColumn,
+            this.ghichuDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.nhapBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(578, 377);
             this.dataGridView1.TabIndex = 8;
@@ -349,420 +271,120 @@
             this.sohd.DataPropertyName = "sohd";
             this.sohd.HeaderText = "Số hóa đơn";
             this.sohd.Name = "sohd";
-            this.sohd.ReadOnly = true;
             // 
             // mavt
             // 
             this.mavt.DataPropertyName = "mavt";
-            this.mavt.HeaderText = "Mã vật tư";
+            this.mavt.HeaderText = "Mã hàng";
             this.mavt.Name = "mavt";
-            this.mavt.ReadOnly = true;
             // 
-            // losx
+            // barcodenhap
             // 
-            this.losx.DataPropertyName = "losx";
-            this.losx.HeaderText = "Lô sản xuất";
-            this.losx.Name = "losx";
-            this.losx.ReadOnly = true;
-            // 
-            // vitri
-            // 
-            this.vitri.DataPropertyName = "vitri";
-            this.vitri.HeaderText = "Vị trí";
-            this.vitri.Name = "vitri";
-            this.vitri.ReadOnly = true;
+            this.barcodenhap.DataPropertyName = "barcodenhap";
+            this.barcodenhap.HeaderText = "Barcode";
+            this.barcodenhap.Name = "barcodenhap";
             // 
             // slnhap
             // 
             this.slnhap.DataPropertyName = "slnhap";
             this.slnhap.HeaderText = "Số lượng nhập";
             this.slnhap.Name = "slnhap";
-            this.slnhap.ReadOnly = true;
             // 
-            // dgnhap
+            // dvt
             // 
-            this.dgnhap.DataPropertyName = "dgnhap";
-            this.dgnhap.HeaderText = "Đơn giá nhập";
-            this.dgnhap.Name = "dgnhap";
-            this.dgnhap.ReadOnly = true;
+            this.dvt.DataPropertyName = "dvt";
+            this.dvt.HeaderText = "Đơn vị tính";
+            this.dvt.Name = "dvt";
             // 
             // ngaynhap
             // 
             this.ngaynhap.DataPropertyName = "ngaynhap";
             this.ngaynhap.HeaderText = "Ngày nhập";
             this.ngaynhap.Name = "ngaynhap";
-            this.ngaynhap.ReadOnly = true;
             // 
             // manv
             // 
             this.manv.DataPropertyName = "manv";
-            this.manv.HeaderText = "Mã nhân viên";
+            this.manv.HeaderText = "Người nhập";
             this.manv.Name = "manv";
-            this.manv.ReadOnly = true;
             // 
-            // nguoinhap
+            // dvgiaonhan
             // 
-            this.nguoinhap.DataPropertyName = "nguoinhap";
-            this.nguoinhap.HeaderText = "Người nhập";
-            this.nguoinhap.Name = "nguoinhap";
-            this.nguoinhap.ReadOnly = true;
+            this.dvgiaonhan.DataPropertyName = "dvgiaonhan";
+            this.dvgiaonhan.HeaderText = "Đơn vị giao nhận";
+            this.dvgiaonhan.Name = "dvgiaonhan";
             // 
-            // acceptButtonDataGridViewTextBoxColumn
+            // ghichu
             // 
-            this.acceptButtonDataGridViewTextBoxColumn.DataPropertyName = "AcceptButton";
-            this.acceptButtonDataGridViewTextBoxColumn.HeaderText = "AcceptButton";
-            this.acceptButtonDataGridViewTextBoxColumn.Name = "acceptButtonDataGridViewTextBoxColumn";
-            this.acceptButtonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ghichu.DataPropertyName = "ghichu";
+            this.ghichu.HeaderText = "Ghi chú";
+            this.ghichu.Name = "ghichu";
             // 
-            // autoScrollDataGridViewCheckBoxColumn
+            // sohdDataGridViewTextBoxColumn
             // 
-            this.autoScrollDataGridViewCheckBoxColumn.DataPropertyName = "AutoScroll";
-            this.autoScrollDataGridViewCheckBoxColumn.HeaderText = "AutoScroll";
-            this.autoScrollDataGridViewCheckBoxColumn.Name = "autoScrollDataGridViewCheckBoxColumn";
-            this.autoScrollDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.sohdDataGridViewTextBoxColumn.DataPropertyName = "sohd";
+            this.sohdDataGridViewTextBoxColumn.HeaderText = "sohd";
+            this.sohdDataGridViewTextBoxColumn.Name = "sohdDataGridViewTextBoxColumn";
             // 
-            // autoSizeDataGridViewCheckBoxColumn
+            // mavtDataGridViewTextBoxColumn
             // 
-            this.autoSizeDataGridViewCheckBoxColumn.DataPropertyName = "AutoSize";
-            this.autoSizeDataGridViewCheckBoxColumn.HeaderText = "AutoSize";
-            this.autoSizeDataGridViewCheckBoxColumn.Name = "autoSizeDataGridViewCheckBoxColumn";
-            this.autoSizeDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.mavtDataGridViewTextBoxColumn.DataPropertyName = "mavt";
+            this.mavtDataGridViewTextBoxColumn.HeaderText = "mavt";
+            this.mavtDataGridViewTextBoxColumn.Name = "mavtDataGridViewTextBoxColumn";
             // 
-            // autoSizeModeDataGridViewTextBoxColumn
+            // barcodenhapDataGridViewTextBoxColumn
             // 
-            this.autoSizeModeDataGridViewTextBoxColumn.DataPropertyName = "AutoSizeMode";
-            this.autoSizeModeDataGridViewTextBoxColumn.HeaderText = "AutoSizeMode";
-            this.autoSizeModeDataGridViewTextBoxColumn.Name = "autoSizeModeDataGridViewTextBoxColumn";
-            this.autoSizeModeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.barcodenhapDataGridViewTextBoxColumn.DataPropertyName = "barcodenhap";
+            this.barcodenhapDataGridViewTextBoxColumn.HeaderText = "barcodenhap";
+            this.barcodenhapDataGridViewTextBoxColumn.Name = "barcodenhapDataGridViewTextBoxColumn";
             // 
-            // autoValidateDataGridViewTextBoxColumn
+            // slnhapDataGridViewTextBoxColumn
             // 
-            this.autoValidateDataGridViewTextBoxColumn.DataPropertyName = "AutoValidate";
-            this.autoValidateDataGridViewTextBoxColumn.HeaderText = "AutoValidate";
-            this.autoValidateDataGridViewTextBoxColumn.Name = "autoValidateDataGridViewTextBoxColumn";
-            this.autoValidateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slnhapDataGridViewTextBoxColumn.DataPropertyName = "slnhap";
+            this.slnhapDataGridViewTextBoxColumn.HeaderText = "slnhap";
+            this.slnhapDataGridViewTextBoxColumn.Name = "slnhapDataGridViewTextBoxColumn";
             // 
-            // backColorDataGridViewTextBoxColumn
+            // dvtDataGridViewTextBoxColumn
             // 
-            this.backColorDataGridViewTextBoxColumn.DataPropertyName = "BackColor";
-            this.backColorDataGridViewTextBoxColumn.HeaderText = "BackColor";
-            this.backColorDataGridViewTextBoxColumn.Name = "backColorDataGridViewTextBoxColumn";
-            this.backColorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dvtDataGridViewTextBoxColumn.DataPropertyName = "dvt";
+            this.dvtDataGridViewTextBoxColumn.HeaderText = "dvt";
+            this.dvtDataGridViewTextBoxColumn.Name = "dvtDataGridViewTextBoxColumn";
             // 
-            // formBorderStyleDataGridViewTextBoxColumn
+            // ngaynhapDataGridViewTextBoxColumn
             // 
-            this.formBorderStyleDataGridViewTextBoxColumn.DataPropertyName = "FormBorderStyle";
-            this.formBorderStyleDataGridViewTextBoxColumn.HeaderText = "FormBorderStyle";
-            this.formBorderStyleDataGridViewTextBoxColumn.Name = "formBorderStyleDataGridViewTextBoxColumn";
-            this.formBorderStyleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngaynhapDataGridViewTextBoxColumn.DataPropertyName = "ngaynhap";
+            this.ngaynhapDataGridViewTextBoxColumn.HeaderText = "ngaynhap";
+            this.ngaynhapDataGridViewTextBoxColumn.Name = "ngaynhapDataGridViewTextBoxColumn";
             // 
-            // cancelButtonDataGridViewTextBoxColumn
+            // manvDataGridViewTextBoxColumn
             // 
-            this.cancelButtonDataGridViewTextBoxColumn.DataPropertyName = "CancelButton";
-            this.cancelButtonDataGridViewTextBoxColumn.HeaderText = "CancelButton";
-            this.cancelButtonDataGridViewTextBoxColumn.Name = "cancelButtonDataGridViewTextBoxColumn";
-            this.cancelButtonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manvDataGridViewTextBoxColumn.DataPropertyName = "manv";
+            this.manvDataGridViewTextBoxColumn.HeaderText = "manv";
+            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
             // 
-            // controlBoxDataGridViewCheckBoxColumn
+            // dvgiaonhanDataGridViewTextBoxColumn
             // 
-            this.controlBoxDataGridViewCheckBoxColumn.DataPropertyName = "ControlBox";
-            this.controlBoxDataGridViewCheckBoxColumn.HeaderText = "ControlBox";
-            this.controlBoxDataGridViewCheckBoxColumn.Name = "controlBoxDataGridViewCheckBoxColumn";
-            this.controlBoxDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.dvgiaonhanDataGridViewTextBoxColumn.DataPropertyName = "dvgiaonhan";
+            this.dvgiaonhanDataGridViewTextBoxColumn.HeaderText = "dvgiaonhan";
+            this.dvgiaonhanDataGridViewTextBoxColumn.Name = "dvgiaonhanDataGridViewTextBoxColumn";
             // 
-            // helpButtonDataGridViewCheckBoxColumn
+            // ghichuDataGridViewTextBoxColumn
             // 
-            this.helpButtonDataGridViewCheckBoxColumn.DataPropertyName = "HelpButton";
-            this.helpButtonDataGridViewCheckBoxColumn.HeaderText = "HelpButton";
-            this.helpButtonDataGridViewCheckBoxColumn.Name = "helpButtonDataGridViewCheckBoxColumn";
-            this.helpButtonDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ghichuDataGridViewTextBoxColumn.DataPropertyName = "ghichu";
+            this.ghichuDataGridViewTextBoxColumn.HeaderText = "ghichu";
+            this.ghichuDataGridViewTextBoxColumn.Name = "ghichuDataGridViewTextBoxColumn";
             // 
-            // isMdiContainerDataGridViewCheckBoxColumn
+            // nhapBindingSource1
             // 
-            this.isMdiContainerDataGridViewCheckBoxColumn.DataPropertyName = "IsMdiContainer";
-            this.isMdiContainerDataGridViewCheckBoxColumn.HeaderText = "IsMdiContainer";
-            this.isMdiContainerDataGridViewCheckBoxColumn.Name = "isMdiContainerDataGridViewCheckBoxColumn";
-            this.isMdiContainerDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.nhapBindingSource1.DataSource = typeof(QLkho.Nhap);
             // 
-            // keyPreviewDataGridViewCheckBoxColumn
+            // frmNhapBindingSource
             // 
-            this.keyPreviewDataGridViewCheckBoxColumn.DataPropertyName = "KeyPreview";
-            this.keyPreviewDataGridViewCheckBoxColumn.HeaderText = "KeyPreview";
-            this.keyPreviewDataGridViewCheckBoxColumn.Name = "keyPreviewDataGridViewCheckBoxColumn";
-            this.keyPreviewDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.frmNhapBindingSource.DataSource = typeof(QLkho.frmNhap);
             // 
-            // locationDataGridViewTextBoxColumn
+            // nhapBindingSource
             // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maximumSizeDataGridViewTextBoxColumn
-            // 
-            this.maximumSizeDataGridViewTextBoxColumn.DataPropertyName = "MaximumSize";
-            this.maximumSizeDataGridViewTextBoxColumn.HeaderText = "MaximumSize";
-            this.maximumSizeDataGridViewTextBoxColumn.Name = "maximumSizeDataGridViewTextBoxColumn";
-            this.maximumSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mainMenuStripDataGridViewTextBoxColumn
-            // 
-            this.mainMenuStripDataGridViewTextBoxColumn.DataPropertyName = "MainMenuStrip";
-            this.mainMenuStripDataGridViewTextBoxColumn.HeaderText = "MainMenuStrip";
-            this.mainMenuStripDataGridViewTextBoxColumn.Name = "mainMenuStripDataGridViewTextBoxColumn";
-            this.mainMenuStripDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // minimumSizeDataGridViewTextBoxColumn
-            // 
-            this.minimumSizeDataGridViewTextBoxColumn.DataPropertyName = "MinimumSize";
-            this.minimumSizeDataGridViewTextBoxColumn.HeaderText = "MinimumSize";
-            this.minimumSizeDataGridViewTextBoxColumn.Name = "minimumSizeDataGridViewTextBoxColumn";
-            this.minimumSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maximizeBoxDataGridViewCheckBoxColumn
-            // 
-            this.maximizeBoxDataGridViewCheckBoxColumn.DataPropertyName = "MaximizeBox";
-            this.maximizeBoxDataGridViewCheckBoxColumn.HeaderText = "MaximizeBox";
-            this.maximizeBoxDataGridViewCheckBoxColumn.Name = "maximizeBoxDataGridViewCheckBoxColumn";
-            this.maximizeBoxDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // minimizeBoxDataGridViewCheckBoxColumn
-            // 
-            this.minimizeBoxDataGridViewCheckBoxColumn.DataPropertyName = "MinimizeBox";
-            this.minimizeBoxDataGridViewCheckBoxColumn.HeaderText = "MinimizeBox";
-            this.minimizeBoxDataGridViewCheckBoxColumn.Name = "minimizeBoxDataGridViewCheckBoxColumn";
-            this.minimizeBoxDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // opacityDataGridViewTextBoxColumn
-            // 
-            this.opacityDataGridViewTextBoxColumn.DataPropertyName = "Opacity";
-            this.opacityDataGridViewTextBoxColumn.HeaderText = "Opacity";
-            this.opacityDataGridViewTextBoxColumn.Name = "opacityDataGridViewTextBoxColumn";
-            this.opacityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rightToLeftLayoutDataGridViewCheckBoxColumn
-            // 
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn.DataPropertyName = "RightToLeftLayout";
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn.HeaderText = "RightToLeftLayout";
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn.Name = "rightToLeftLayoutDataGridViewCheckBoxColumn";
-            this.rightToLeftLayoutDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // showInTaskbarDataGridViewCheckBoxColumn
-            // 
-            this.showInTaskbarDataGridViewCheckBoxColumn.DataPropertyName = "ShowInTaskbar";
-            this.showInTaskbarDataGridViewCheckBoxColumn.HeaderText = "ShowInTaskbar";
-            this.showInTaskbarDataGridViewCheckBoxColumn.Name = "showInTaskbarDataGridViewCheckBoxColumn";
-            this.showInTaskbarDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sizeGripStyleDataGridViewTextBoxColumn
-            // 
-            this.sizeGripStyleDataGridViewTextBoxColumn.DataPropertyName = "SizeGripStyle";
-            this.sizeGripStyleDataGridViewTextBoxColumn.HeaderText = "SizeGripStyle";
-            this.sizeGripStyleDataGridViewTextBoxColumn.Name = "sizeGripStyleDataGridViewTextBoxColumn";
-            this.sizeGripStyleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // startPositionDataGridViewTextBoxColumn
-            // 
-            this.startPositionDataGridViewTextBoxColumn.DataPropertyName = "StartPosition";
-            this.startPositionDataGridViewTextBoxColumn.HeaderText = "StartPosition";
-            this.startPositionDataGridViewTextBoxColumn.Name = "startPositionDataGridViewTextBoxColumn";
-            this.startPositionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // textDataGridViewTextBoxColumn
-            // 
-            this.textDataGridViewTextBoxColumn.DataPropertyName = "Text";
-            this.textDataGridViewTextBoxColumn.HeaderText = "Text";
-            this.textDataGridViewTextBoxColumn.Name = "textDataGridViewTextBoxColumn";
-            this.textDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // topMostDataGridViewCheckBoxColumn
-            // 
-            this.topMostDataGridViewCheckBoxColumn.DataPropertyName = "TopMost";
-            this.topMostDataGridViewCheckBoxColumn.HeaderText = "TopMost";
-            this.topMostDataGridViewCheckBoxColumn.Name = "topMostDataGridViewCheckBoxColumn";
-            this.topMostDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // transparencyKeyDataGridViewTextBoxColumn
-            // 
-            this.transparencyKeyDataGridViewTextBoxColumn.DataPropertyName = "TransparencyKey";
-            this.transparencyKeyDataGridViewTextBoxColumn.HeaderText = "TransparencyKey";
-            this.transparencyKeyDataGridViewTextBoxColumn.Name = "transparencyKeyDataGridViewTextBoxColumn";
-            this.transparencyKeyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // windowStateDataGridViewTextBoxColumn
-            // 
-            this.windowStateDataGridViewTextBoxColumn.DataPropertyName = "WindowState";
-            this.windowStateDataGridViewTextBoxColumn.HeaderText = "WindowState";
-            this.windowStateDataGridViewTextBoxColumn.Name = "windowStateDataGridViewTextBoxColumn";
-            this.windowStateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // autoScrollMarginDataGridViewTextBoxColumn
-            // 
-            this.autoScrollMarginDataGridViewTextBoxColumn.DataPropertyName = "AutoScrollMargin";
-            this.autoScrollMarginDataGridViewTextBoxColumn.HeaderText = "AutoScrollMargin";
-            this.autoScrollMarginDataGridViewTextBoxColumn.Name = "autoScrollMarginDataGridViewTextBoxColumn";
-            this.autoScrollMarginDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // autoScrollMinSizeDataGridViewTextBoxColumn
-            // 
-            this.autoScrollMinSizeDataGridViewTextBoxColumn.DataPropertyName = "AutoScrollMinSize";
-            this.autoScrollMinSizeDataGridViewTextBoxColumn.HeaderText = "AutoScrollMinSize";
-            this.autoScrollMinSizeDataGridViewTextBoxColumn.Name = "autoScrollMinSizeDataGridViewTextBoxColumn";
-            this.autoScrollMinSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accessibleDescriptionDataGridViewTextBoxColumn
-            // 
-            this.accessibleDescriptionDataGridViewTextBoxColumn.DataPropertyName = "AccessibleDescription";
-            this.accessibleDescriptionDataGridViewTextBoxColumn.HeaderText = "AccessibleDescription";
-            this.accessibleDescriptionDataGridViewTextBoxColumn.Name = "accessibleDescriptionDataGridViewTextBoxColumn";
-            this.accessibleDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accessibleNameDataGridViewTextBoxColumn
-            // 
-            this.accessibleNameDataGridViewTextBoxColumn.DataPropertyName = "AccessibleName";
-            this.accessibleNameDataGridViewTextBoxColumn.HeaderText = "AccessibleName";
-            this.accessibleNameDataGridViewTextBoxColumn.Name = "accessibleNameDataGridViewTextBoxColumn";
-            this.accessibleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accessibleRoleDataGridViewTextBoxColumn
-            // 
-            this.accessibleRoleDataGridViewTextBoxColumn.DataPropertyName = "AccessibleRole";
-            this.accessibleRoleDataGridViewTextBoxColumn.HeaderText = "AccessibleRole";
-            this.accessibleRoleDataGridViewTextBoxColumn.Name = "accessibleRoleDataGridViewTextBoxColumn";
-            this.accessibleRoleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // allowDropDataGridViewCheckBoxColumn
-            // 
-            this.allowDropDataGridViewCheckBoxColumn.DataPropertyName = "AllowDrop";
-            this.allowDropDataGridViewCheckBoxColumn.HeaderText = "AllowDrop";
-            this.allowDropDataGridViewCheckBoxColumn.Name = "allowDropDataGridViewCheckBoxColumn";
-            this.allowDropDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // anchorDataGridViewTextBoxColumn
-            // 
-            this.anchorDataGridViewTextBoxColumn.DataPropertyName = "Anchor";
-            this.anchorDataGridViewTextBoxColumn.HeaderText = "Anchor";
-            this.anchorDataGridViewTextBoxColumn.Name = "anchorDataGridViewTextBoxColumn";
-            this.anchorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // backgroundImageDataGridViewImageColumn
-            // 
-            this.backgroundImageDataGridViewImageColumn.DataPropertyName = "BackgroundImage";
-            this.backgroundImageDataGridViewImageColumn.HeaderText = "BackgroundImage";
-            this.backgroundImageDataGridViewImageColumn.Name = "backgroundImageDataGridViewImageColumn";
-            this.backgroundImageDataGridViewImageColumn.ReadOnly = true;
-            // 
-            // backgroundImageLayoutDataGridViewTextBoxColumn
-            // 
-            this.backgroundImageLayoutDataGridViewTextBoxColumn.DataPropertyName = "BackgroundImageLayout";
-            this.backgroundImageLayoutDataGridViewTextBoxColumn.HeaderText = "BackgroundImageLayout";
-            this.backgroundImageLayoutDataGridViewTextBoxColumn.Name = "backgroundImageLayoutDataGridViewTextBoxColumn";
-            this.backgroundImageLayoutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // causesValidationDataGridViewCheckBoxColumn
-            // 
-            this.causesValidationDataGridViewCheckBoxColumn.DataPropertyName = "CausesValidation";
-            this.causesValidationDataGridViewCheckBoxColumn.HeaderText = "CausesValidation";
-            this.causesValidationDataGridViewCheckBoxColumn.Name = "causesValidationDataGridViewCheckBoxColumn";
-            this.causesValidationDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // contextMenuStripDataGridViewTextBoxColumn
-            // 
-            this.contextMenuStripDataGridViewTextBoxColumn.DataPropertyName = "ContextMenuStrip";
-            this.contextMenuStripDataGridViewTextBoxColumn.HeaderText = "ContextMenuStrip";
-            this.contextMenuStripDataGridViewTextBoxColumn.Name = "contextMenuStripDataGridViewTextBoxColumn";
-            this.contextMenuStripDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cursorDataGridViewTextBoxColumn
-            // 
-            this.cursorDataGridViewTextBoxColumn.DataPropertyName = "Cursor";
-            this.cursorDataGridViewTextBoxColumn.HeaderText = "Cursor";
-            this.cursorDataGridViewTextBoxColumn.Name = "cursorDataGridViewTextBoxColumn";
-            this.cursorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataBindingsDataGridViewTextBoxColumn
-            // 
-            this.dataBindingsDataGridViewTextBoxColumn.DataPropertyName = "DataBindings";
-            this.dataBindingsDataGridViewTextBoxColumn.HeaderText = "DataBindings";
-            this.dataBindingsDataGridViewTextBoxColumn.Name = "dataBindingsDataGridViewTextBoxColumn";
-            this.dataBindingsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dockDataGridViewTextBoxColumn
-            // 
-            this.dockDataGridViewTextBoxColumn.DataPropertyName = "Dock";
-            this.dockDataGridViewTextBoxColumn.HeaderText = "Dock";
-            this.dockDataGridViewTextBoxColumn.Name = "dockDataGridViewTextBoxColumn";
-            this.dockDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // enabledDataGridViewCheckBoxColumn
-            // 
-            this.enabledDataGridViewCheckBoxColumn.DataPropertyName = "Enabled";
-            this.enabledDataGridViewCheckBoxColumn.HeaderText = "Enabled";
-            this.enabledDataGridViewCheckBoxColumn.Name = "enabledDataGridViewCheckBoxColumn";
-            this.enabledDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // fontDataGridViewTextBoxColumn
-            // 
-            this.fontDataGridViewTextBoxColumn.DataPropertyName = "Font";
-            this.fontDataGridViewTextBoxColumn.HeaderText = "Font";
-            this.fontDataGridViewTextBoxColumn.Name = "fontDataGridViewTextBoxColumn";
-            this.fontDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // foreColorDataGridViewTextBoxColumn
-            // 
-            this.foreColorDataGridViewTextBoxColumn.DataPropertyName = "ForeColor";
-            this.foreColorDataGridViewTextBoxColumn.HeaderText = "ForeColor";
-            this.foreColorDataGridViewTextBoxColumn.Name = "foreColorDataGridViewTextBoxColumn";
-            this.foreColorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rightToLeftDataGridViewTextBoxColumn
-            // 
-            this.rightToLeftDataGridViewTextBoxColumn.DataPropertyName = "RightToLeft";
-            this.rightToLeftDataGridViewTextBoxColumn.HeaderText = "RightToLeft";
-            this.rightToLeftDataGridViewTextBoxColumn.Name = "rightToLeftDataGridViewTextBoxColumn";
-            this.rightToLeftDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tagDataGridViewTextBoxColumn
-            // 
-            this.tagDataGridViewTextBoxColumn.DataPropertyName = "Tag";
-            this.tagDataGridViewTextBoxColumn.HeaderText = "Tag";
-            this.tagDataGridViewTextBoxColumn.Name = "tagDataGridViewTextBoxColumn";
-            this.tagDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // useWaitCursorDataGridViewCheckBoxColumn
-            // 
-            this.useWaitCursorDataGridViewCheckBoxColumn.DataPropertyName = "UseWaitCursor";
-            this.useWaitCursorDataGridViewCheckBoxColumn.HeaderText = "UseWaitCursor";
-            this.useWaitCursorDataGridViewCheckBoxColumn.Name = "useWaitCursorDataGridViewCheckBoxColumn";
-            this.useWaitCursorDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // visibleDataGridViewCheckBoxColumn
-            // 
-            this.visibleDataGridViewCheckBoxColumn.DataPropertyName = "Visible";
-            this.visibleDataGridViewCheckBoxColumn.HeaderText = "Visible";
-            this.visibleDataGridViewCheckBoxColumn.Name = "visibleDataGridViewCheckBoxColumn";
-            this.visibleDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // paddingDataGridViewTextBoxColumn
-            // 
-            this.paddingDataGridViewTextBoxColumn.DataPropertyName = "Padding";
-            this.paddingDataGridViewTextBoxColumn.HeaderText = "Padding";
-            this.paddingDataGridViewTextBoxColumn.Name = "paddingDataGridViewTextBoxColumn";
-            this.paddingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imeModeDataGridViewTextBoxColumn
-            // 
-            this.imeModeDataGridViewTextBoxColumn.DataPropertyName = "ImeMode";
-            this.imeModeDataGridViewTextBoxColumn.HeaderText = "ImeMode";
-            this.imeModeDataGridViewTextBoxColumn.Name = "imeModeDataGridViewTextBoxColumn";
-            this.imeModeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nhapBindingSource.DataSource = typeof(QLkho.Nhap);
             // 
             // nhapkhoBindingSource
             // 
@@ -795,6 +417,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmNhapBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhapkhoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -817,65 +442,26 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource nhapkhoBindingSource;
+        private System.Windows.Forms.BindingSource nhapBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohd;
         private System.Windows.Forms.DataGridViewTextBoxColumn mavt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn losx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vitri;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barcodenhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn slnhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgnhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nguoinhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn acceptButtonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn autoScrollDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn autoSizeDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autoSizeModeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autoValidateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn backColorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn formBorderStyleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cancelButtonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn controlBoxDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn helpButtonDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isMdiContainerDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn keyPreviewDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maximumSizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mainMenuStripDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn minimumSizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn maximizeBoxDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn minimizeBoxDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opacityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn rightToLeftLayoutDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn showInTaskbarDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeGripStyleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startPositionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn textDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn topMostDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transparencyKeyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn windowStateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autoScrollMarginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autoScrollMinSizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accessibleDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accessibleNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accessibleRoleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn allowDropDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn anchorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn backgroundImageDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn backgroundImageLayoutDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn causesValidationDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contextMenuStripDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cursorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataBindingsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dockDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn enabledDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fontDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foreColorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rightToLeftDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tagDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn useWaitCursorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn visibleDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paddingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeModeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgiaonhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
+        private System.Windows.Forms.BindingSource frmNhapBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sohdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mavtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barcodenhapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slnhapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manvDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgiaonhanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource nhapBindingSource1;
     }
 }

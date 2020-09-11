@@ -30,7 +30,7 @@ namespace QLkho
         {
             try
             {
-                string sql = "SELECT sohd , NhapKho.mavt, tenvt, barcode,slnhap,dvt,ngaynhap,username,dvgiaonhan,ghichu FROM NhapKho INNER JOIN VatTu ON VatTu.mavt = NhapKho.mavt INNER JOIN NhanVien ON NhanVien.manv = NhapKho.manv";
+                string sql = "SELECT sohd , NhapKho.mavt, tenvt, barcodenhap,slnhap,dvt,ngaynhap,username,dvgiaonhan,ghichu FROM NhapKho INNER JOIN VatTu ON VatTu.mavt = NhapKho.mavt INNER JOIN NhanVien ON NhanVien.manv = NhapKho.manv";
                 gridControl1.DataSource = ConnectDB.getTable(sql);
 
             }catch
@@ -62,7 +62,7 @@ namespace QLkho
             txtslnhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "slnhap").ToString();
             txtdvtinh.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "dvt").ToString();
             cb_user.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "username").ToString();
-            txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "barcode").ToString();
+            txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "barcodenhap").ToString();
             date_nhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ngaynhap").ToString();
             txtghichu.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ghichu").ToString();
         }
@@ -73,7 +73,7 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "insert into NhapKho values('" + txtmahd.Text + "','"+txtmvt+"','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" +Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
+                    string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','"+txtmvt.Text+"','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" +Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
 
                     if (ConnectDB.Query(sql) == -1)
                     {
@@ -117,7 +117,7 @@ namespace QLkho
         {
             try
             {
-                string sql3 = "SELECT sohd , tenvt,losx,vitri,slnhap,dgnhap,ngaynhap,username,nguoinhap,(slnhap*dgnhap) as thanhtien FROM NhapKho INNER JOIN VatTu ON VatTu.mavt = NhapKho.mavt INNER JOIN NhanVien ON NhanVien.manv = NhapKho.manv";
+                string sql3 = "SELECT sohd , NhapKho.mavt, tenvt, barcodenhap,slnhap,dvt,ngaynhap,username,dvgiaonhan,ghichu FROM NhapKho INNER JOIN VatTu ON VatTu.mavt = NhapKho.mavt INNER JOIN NhanVien ON NhanVien.manv = NhapKho.manv";
                 SaveFileDialog saveFileDialogExcel = new SaveFileDialog();
                 saveFileDialogExcel.Filter = "Excel files (*.xlsx)|*.xlsx";
                 if (saveFileDialogExcel.ShowDialog() == DialogResult.OK)
@@ -125,10 +125,12 @@ namespace QLkho
                     string exportFilePath = saveFileDialogExcel.FileName;
                     gridControl1.DataSource = ConnectDB.getTable(sql3);
                     gridControl1.ExportToXlsx(exportFilePath);
+                    XtraMessageBox.Show("Xuất file Excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }catch
+            }
+            catch
             {
-                XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Không thể Xuất file Excel", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -146,15 +148,15 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "update NhapKho set mavt'" + txtmvt + "',barcodenhap ='" + txtbarcode.Text + "',slnhap='" + txtslnhap.Text + "',dvt ='" + txtdvtinh.Text + "',ngaynhap ='" + Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "', manv = '" + cb_user.EditValue.ToString() + "',dvgiaonhan = N'" + txtdvgiaonhan.Text + "',ghichu = N'" + txtghichu.Text + "' where '" + txtmahd.Text + "'";
+                    string sql = "update NhapKho set mavt = '" + txtmvt.Text + "',barcodenhap ='" + txtbarcode.Text + "',slnhap ='" + txtslnhap.Text + "',dvt ='" + txtdvtinh.Text + "',ngaynhap ='" + Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "', manv = '" + cb_user.EditValue.ToString() + "',dvgiaonhan = N'" + txtdvgiaonhan.Text + "',ghichu = N'" + txtghichu.Text + "' where sohd ='" + txtmahd.Text + "'";
 
                     if (ConnectDB.Query(sql) == -1)
                     {
-                        XtraMessageBox.Show("Nhập không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Update không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XtraMessageBox.Show("Update thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         hien();
                     }
                 }
@@ -192,27 +194,6 @@ namespace QLkho
                 XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
-        }
-
-
-        private void txtbarcode_Leave(object sender, EventArgs e)
-        {
-            string sql2 = @"select tenvt,mavt from VatTu where barcode = '" + txtbarcode.Text.Trim() + "' ";
-            DataTable tb = ConnectDB.getTable(sql2);
-            if (tb.Rows.Count > 0)
-            {
-                txttenvt.Text = tb.Rows[0]["tenvt"].ToString().Trim();
-                txtmvt.Text = tb.Rows[0]["mavt"].ToString().Trim();
-            }
-            else
-            {
-                XtraMessageBox.Show("Không tìm thấy thông tin hàng có barcode này");
-            }
-        }
-
-        private void txtbarcode_KeyDown(object sender, KeyEventArgs e)
-        {
-           
         }
 
         private void simpleButton8_Click(object sender, EventArgs e)
