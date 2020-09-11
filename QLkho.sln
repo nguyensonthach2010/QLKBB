@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLkho", "QLkho\QLkho.csproj", "{9DED36BA-B9DB-4267-843C-0F2EA24B2894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DED36BA-B9DB-4267-843C-0F2EA24B2894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DED36BA-B9DB-4267-843C-0F2EA24B2894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DED36BA-B9DB-4267-843C-0F2EA24B2894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DED36BA-B9DB-4267-843C-0F2EA24B2894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A71BE40-D84B-4AB6-A231-C713C6486C46}
+	EndGlobalSection
+EndGlobal
