@@ -21,6 +21,7 @@ namespace QLkho
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             skin();
             taikhoan = Dangnhap.tk;
             barHeaderItem1.Caption = "Bạn đang đăng nhập với user :" + " " + taikhoan;
