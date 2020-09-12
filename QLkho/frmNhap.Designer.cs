@@ -343,15 +343,15 @@
             // 
             this.txtslnhap.Location = new System.Drawing.Point(448, 48);
             this.txtslnhap.Name = "txtslnhap";
-            this.txtslnhap.Size = new System.Drawing.Size(61, 20);
+            this.txtslnhap.Size = new System.Drawing.Size(62, 20);
             this.txtslnhap.StyleController = this.layoutControl1;
             this.txtslnhap.TabIndex = 6;
             // 
             // txtdvtinh
             // 
-            this.txtdvtinh.Location = new System.Drawing.Point(634, 48);
+            this.txtdvtinh.Location = new System.Drawing.Point(635, 48);
             this.txtdvtinh.Name = "txtdvtinh";
-            this.txtdvtinh.Size = new System.Drawing.Size(54, 20);
+            this.txtdvtinh.Size = new System.Drawing.Size(53, 20);
             this.txtdvtinh.StyleController = this.layoutControl1;
             this.txtdvtinh.TabIndex = 6;
             // 
@@ -381,9 +381,9 @@
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "Đơn giá nhập";
             this.layoutControlItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem5.ImageOptions.Image")));
-            this.layoutControlItem5.Location = new System.Drawing.Point(501, 36);
+            this.layoutControlItem5.Location = new System.Drawing.Point(502, 36);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(179, 36);
+            this.layoutControlItem5.Size = new System.Drawing.Size(178, 36);
             this.layoutControlItem5.Text = "Đơn vị tính";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(118, 32);
             // 
@@ -395,7 +395,7 @@
             this.layoutControlItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem7.ImageOptions.Image")));
             this.layoutControlItem7.Location = new System.Drawing.Point(315, 36);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(186, 36);
+            this.layoutControlItem7.Size = new System.Drawing.Size(187, 36);
             this.layoutControlItem7.Text = "Số lượng nhập";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(118, 32);
             // 

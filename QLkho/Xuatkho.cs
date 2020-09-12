@@ -19,9 +19,9 @@ namespace QLkho
         }
         private bool validate()
         {   //hàm kiểm tra dữ liệu nhập vào có rỗng hay k
-            if (txtmahd.Text == "" || txtlosx.Text == "" || txtdgxuat.Text == "" || txtnguoixuat.Text == "" || txtslxuat.Text == "" || txtvitri.Text == "")
+            if (txtmahd.Text == "" || txttenvt.Text == "" || txtdvtinh.Text == "" || txtslnhap.Text == "" || txtdvgiaonhan.Text == "" || txtmvt.Text == "" || txtbarcode.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Vui lòng nhập đầy đủ thông tin !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -30,8 +30,9 @@ namespace QLkho
         {
             try
             {
-                string sql = "SELECT sohd , tenvt,losx,vitri,slxuat,dgxuat,ngayxuat,username,nguoixuat,(slxuat*dgxuat) as thanhtien FROM XuatKho INNER JOIN VatTu ON VatTu.mavt = XuatKho.mavt INNER JOIN NhanVien ON NhanVien.manv = XuatKho.manv";
+                string sql = "SELECT sohd , XuatKho.mavt, tenvt, barcodexuat,slxuat,dvt,ngayxuat,username,dvgiaonhan,ghichu FROM XuatKho INNER JOIN VatTu ON VatTu.mavt = XuatKho.mavt INNER JOIN NhanVien ON NhanVien.manv = XuatKho.manv";
                 gridControl1.DataSource = ConnectDB.getTable(sql);
+
             }
             catch
             {
@@ -43,33 +44,14 @@ namespace QLkho
         {
             userxuat = Form1.taikhoan;
             string sql1 = "select *from NhanVien where username ='" + userxuat + "'";
-            cb_nhanvien.Properties.DataSource = ConnectDB.getTable(sql1);
-            cb_nhanvien.Properties.DisplayMember = "username";
-            cb_nhanvien.Properties.ValueMember = "manv";
-
-            string sql2 = "select*from VatTu";
-            cb_tenvt.Properties.DataSource = ConnectDB.getTable(sql2);
-            cb_tenvt.Properties.DisplayMember = "tenvt";
-            cb_tenvt.Properties.ValueMember = "mavt";
+            cb_user.Properties.DataSource = ConnectDB.getTable(sql1);
+            cb_user.Properties.DisplayMember = "username";
+            cb_user.Properties.ValueMember = "manv";
             hien();
             DateTime dt = DateTime.Now;
-            date_xuat.DateTime = dt;
+            date_nhap.DateTime = dt;
         }
         string userxuat = "";
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-            txtmahd.ReadOnly = true;
-            txtmahd.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "sohd").ToString();
-            cb_tenvt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "tenvt").ToString();
-            txtlosx.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "losx").ToString();
-            txtvitri.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "vitri").ToString();
-            txtslxuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "slxuat").ToString();
-            txtdgxuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "dgxuat").ToString();
-            txtnguoixuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "nguoixuat").ToString();
-            cb_nhanvien.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "username").ToString();
-            date_xuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ngayxuat").ToString();
-        }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -77,7 +59,7 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "insert into XuatKho values('" + txtmahd.Text + "',N'" + cb_tenvt.EditValue.ToString() + "',N'" + txtlosx.Text + "','" + txtvitri.Text + "','" + txtslxuat.Text + "','" + txtdgxuat.Text + "','" + date_xuat.Text + "','" + cb_nhanvien.EditValue.ToString() + "',N'" + txtnguoixuat.Text + "')";
+                    string sql = "insert into XuatKho values('" + txtmahd.Text.Trim() + "','" + txtmvt.Text + "','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" + Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
 
                     if (ConnectDB.Query(sql) == -1)
                     {
@@ -94,21 +76,23 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
+
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
             txtmahd.Text = "";
-            txtlosx.Text = "";
-            txtdgxuat.Text = "";
+            txttenvt.Text = "";
+            txtdvtinh.Text = "";
             txtmahd.ReadOnly = false;
-            txtnguoixuat.Text = "";
-            txtslxuat.Text = "";
-            txtvitri.Text = "";
-            cb_nhanvien.Text = "";
-            cb_tenvt.Text = "";
-            date_xuat.Text = "";
+            txtghichu.Text = "";
+            txtslnhap.Text = "";
+            txtdvgiaonhan.Text = "";
+            cb_user.Text = userxuat;
+            txtbarcode.Text = "";
+            date_nhap.Text = "";
+            txtmvt.Text = "";
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
@@ -120,7 +104,7 @@ namespace QLkho
         {
             try
             {
-                string sql3 = "SELECT sohd , tenvt,losx,vitri,slxuat,dgxuat,ngayxuat,username,nguoixuat,(slxuat*dgxuat) as thanhtien FROM XuatKho INNER JOIN VatTu ON VatTu.mavt = XuatKho.mavt INNER JOIN NhanVien ON NhanVien.manv = XuatKho.manv";
+                string sql3 = "SELECT sohd , XuatKho.mavt, tenvt, barcodexuat,slxuat,dvt,ngayxuat,username,dvgiaonhan,ghichu FROM XuatKho INNER JOIN VatTu ON VatTu.mavt = XuatKho.mavt INNER JOIN NhanVien ON NhanVien.manv = XuatKho.manv";
                 SaveFileDialog saveFileDialogExcel = new SaveFileDialog();
                 saveFileDialogExcel.Filter = "Excel files (*.xlsx)|*.xlsx";
                 if (saveFileDialogExcel.ShowDialog() == DialogResult.OK)
@@ -128,18 +112,18 @@ namespace QLkho
                     string exportFilePath = saveFileDialogExcel.FileName;
                     gridControl1.DataSource = ConnectDB.getTable(sql3);
                     gridControl1.ExportToXlsx(exportFilePath);
+                    XtraMessageBox.Show("Xuất file Excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch
             {
-                XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Không thể Xuất file Excel", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
-        }
 
+        }
         private void simpleButton7_Click(object sender, EventArgs e)
         {
-            Importx im = new Importx();
+            Import im = new Import();
             im.Show();
             this.Hide();
         }
@@ -148,22 +132,18 @@ namespace QLkho
         {
             try
             {
-                DialogResult tb = XtraMessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (tb == DialogResult.Yes)
+                if (validate())
                 {
-                    if (validate())
-                    {
-                        string sql = "update XuatKho set mavt = N'" + cb_tenvt.EditValue.ToString() + "',losx = N'" + txtlosx.Text + "',vitri = '" + txtvitri.Text + "',slxuat = '" + txtslxuat.Text + "',dgxuat = '" + txtdgxuat.Text + "',ngayxuat = '" + date_xuat.Text + "',nguoixuat = N'" + txtnguoixuat.Text + "' where sohd='" + txtmahd.Text + "'";
+                    string sql = "update XuatKho set mavt = '" + txtmvt.Text + "',barcodexuat ='" + txtbarcode.Text + "',slxuat ='" + txtslnhap.Text + "',dvt ='" + txtdvtinh.Text + "',ngayxuat ='" + Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "', manv = '" + cb_user.EditValue.ToString() + "',dvgiaonhan = N'" + txtdvgiaonhan.Text + "',ghichu = N'" + txtghichu.Text + "' where sohd ='" + txtmahd.Text + "'";
 
-                        if (ConnectDB.Query(sql) == -1)
-                        {
-                            XtraMessageBox.Show("Cập nhật không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else
-                        {
-                            XtraMessageBox.Show("Cập nhật thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            hien();
-                        }
+                    if (ConnectDB.Query(sql) == -1)
+                    {
+                        XtraMessageBox.Show("Update không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Update thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        hien();
                     }
                 }
             }
@@ -171,7 +151,6 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -201,6 +180,41 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void simpleButton81_Click(object sender, EventArgs e)
+        {
+            string sql2 = @"select tenvt,mavt from VatTu where barcode = '" + txtbarcode.Text.Trim() + "' ";
+            DataTable tb = ConnectDB.getTable(sql2);
+            if (tb.Rows.Count > 0)
+            {
+                txttenvt.Text = tb.Rows[0]["tenvt"].ToString().Trim();
+                txtmvt.Text = tb.Rows[0]["mavt"].ToString().Trim();
+                DialogResult dr = XtraMessageBox.Show("Barcode có trong CSDL! Bạn có thể nhập các trường còn lại! ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("Không tìm thấy thông tin hàng có barcode này trong CSDL");
+            }
+        }
+
+        private void gridControl1_Click_1(object sender, EventArgs e)
+        {
+            txtmahd.ReadOnly = true;
+            txtmahd.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "sohd").ToString();
+            txttenvt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "tenvt").ToString();
+            txtmvt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "mavt").ToString();
+            txtdvgiaonhan.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "dvgiaonhan").ToString();
+            txtslnhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "slxuat").ToString();
+            txtdvtinh.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "dvt").ToString();
+            cb_user.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "username").ToString();
+            txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "barcodexuat").ToString();
+            date_nhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ngayxuat").ToString();
+            txtghichu.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ghichu").ToString();
         }
     }
 }
