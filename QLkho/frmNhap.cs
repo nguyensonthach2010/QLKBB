@@ -75,7 +75,7 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','"+txtmvt.Text+"','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" +Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
+                    string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','"+txtmvt.Text+"','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" +Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
 
                     if (ConnectDB.Query(sql) == -1)
                     {
@@ -150,7 +150,7 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "update NhapKho set mavt = '" + txtmvt.Text + "',barcodenhap ='" + txtbarcode.Text + "',slnhap ='" + txtslnhap.Text + "',dvt ='" + txtdvtinh.Text + "',ngaynhap ='" + Convert.ToDateTime(date_nhap.Text).ToString("dd-MM-yyyy HH:mm:ss") + "', manv = '" + cb_user.EditValue.ToString() + "',dvgiaonhan = N'" + txtdvgiaonhan.Text + "',ghichu = N'" + txtghichu.Text + "' where sohd ='" + txtmahd.Text + "'";
+                    string sql = "update NhapKho set mavt = '" + txtmvt.Text + "',barcodenhap ='" + txtbarcode.Text + "',slnhap ='" + txtslnhap.Text + "',dvt ='" + txtdvtinh.Text + "',ngaynhap ='" + Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "', manv = '" + cb_user.EditValue.ToString() + "',dvgiaonhan = N'" + txtdvgiaonhan.Text + "',ghichu = N'" + txtghichu.Text + "' where sohd ='" + txtmahd.Text + "'";
 
                     if (ConnectDB.Query(sql) == -1)
                     {

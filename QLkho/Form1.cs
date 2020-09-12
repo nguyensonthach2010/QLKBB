@@ -49,21 +49,6 @@ namespace QLkho
             Doimatkhau doimk = new Doimatkhau();
             doimk.ShowDialog();
         }
-
-        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (Quyen.nhomnd == "Admin")
-            {
-                QLtaikhoan qltk = new QLtaikhoan();
-                qltk.MdiParent = this;
-                qltk.Show();
-            }
-            else
-            {
-                XtraMessageBox.Show("Chỉ admin mới có thể quản lý tài khoản", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             QLvattu qlvt = new QLvattu();
@@ -117,6 +102,26 @@ namespace QLkho
         {
             BackUp bk = new BackUp();
             bk.ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Quyen.nhomnd == "Admin")
+            {
+                QLtaikhoan qltk = new QLtaikhoan();
+                qltk.MdiParent = this;
+                qltk.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ admin mới có thể quản lý tài khoản", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_RPN rp1 = new frm_RPN();
+            rp1.ShowDialog();
         }
     }
 }

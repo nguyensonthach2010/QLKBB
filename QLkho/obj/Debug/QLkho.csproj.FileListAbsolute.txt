@@ -209,3 +209,5 @@ C:\Users\thachns\source\repos\QLkho\QLkho\bin\Debug\es\DevExpress.Diagram.v19.2.
 C:\Users\thachns\source\repos\QLkho\QLkho\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\thachns\source\repos\QLkho\QLkho\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\thachns\source\repos\QLkho\QLkho\obj\Debug\QLkho.XtraReport1.resources
+C:\Users\thachns\source\repos\QLkho\QLkho\obj\Debug\QLkho.frm_RPN.resources
+C:\Users\thachns\source\repos\QLkho\QLkho\obj\Debug\QLkho.RPN.resources

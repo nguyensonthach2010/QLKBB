@@ -121,6 +121,12 @@
     <Compile Include="frmNhap.Designer.cs">
       <DependentUpon>frmNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_RPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPN.Designer.cs">
+      <DependentUpon>frm_RPN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Import.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     <Compile Include="Restore.Designer.cs">
       <DependentUpon>Restore.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPN.Designer.cs">
+      <DependentUpon>RPN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Theokics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,9 @@
     <EmbeddedResource Include="frmNhap.resx">
       <DependentUpon>frmNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPN.resx">
+      <DependentUpon>frm_RPN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Import.resx">
       <DependentUpon>Import.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Restore.resx">
       <DependentUpon>Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPN.resx">
+      <DependentUpon>RPN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Theokics.resx">
       <DependentUpon>Theokics.cs</DependentUpon>

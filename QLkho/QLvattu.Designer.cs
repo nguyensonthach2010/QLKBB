@@ -168,9 +168,9 @@
             // 
             // txtbarcode
             // 
-            this.txtbarcode.Location = new System.Drawing.Point(103, 84);
+            this.txtbarcode.Location = new System.Drawing.Point(870, 12);
             this.txtbarcode.Name = "txtbarcode";
-            this.txtbarcode.Size = new System.Drawing.Size(926, 20);
+            this.txtbarcode.Size = new System.Drawing.Size(176, 20);
             this.txtbarcode.StyleController = this.layoutControl1;
             this.txtbarcode.TabIndex = 5;
             // 
@@ -179,16 +179,16 @@
             this.txtmavt.EditValue = "";
             this.txtmavt.Location = new System.Drawing.Point(103, 12);
             this.txtmavt.Name = "txtmavt";
-            this.txtmavt.Size = new System.Drawing.Size(926, 20);
+            this.txtmavt.Size = new System.Drawing.Size(215, 20);
             this.txtmavt.StyleController = this.layoutControl1;
             this.txtmavt.TabIndex = 4;
             // 
             // txttenvt
             // 
             this.txttenvt.EditValue = "";
-            this.txttenvt.Location = new System.Drawing.Point(103, 48);
+            this.txttenvt.Location = new System.Drawing.Point(413, 12);
             this.txttenvt.Name = "txttenvt";
-            this.txttenvt.Size = new System.Drawing.Size(926, 20);
+            this.txttenvt.Size = new System.Drawing.Size(362, 20);
             this.txttenvt.StyleController = this.layoutControl1;
             this.txttenvt.TabIndex = 4;
             // 
@@ -201,7 +201,7 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1041, 128);
+            this.Root.Size = new System.Drawing.Size(1058, 120);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -212,7 +212,7 @@
             this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1021, 36);
+            this.layoutControlItem1.Size = new System.Drawing.Size(310, 100);
             this.layoutControlItem1.Text = "Mã vât tư";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(88, 32);
             // 
@@ -222,9 +222,9 @@
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "Tên vật tư";
             this.layoutControlItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem2.ImageOptions.Image")));
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 36);
+            this.layoutControlItem2.Location = new System.Drawing.Point(310, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1021, 36);
+            this.layoutControlItem2.Size = new System.Drawing.Size(457, 100);
             this.layoutControlItem2.Text = "Tên vật tư";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(88, 32);
             // 
@@ -232,9 +232,9 @@
             // 
             this.layoutControlItem3.Control = this.txtbarcode;
             this.layoutControlItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem3.ImageOptions.Image")));
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem3.Location = new System.Drawing.Point(767, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1021, 36);
+            this.layoutControlItem3.Size = new System.Drawing.Size(271, 100);
             this.layoutControlItem3.Text = "Barcode";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(88, 32);
             // 

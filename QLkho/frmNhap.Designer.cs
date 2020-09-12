@@ -326,7 +326,7 @@
             this.date_nhap.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.date_nhap.Properties.EditFormat.FormatString = "g";
             this.date_nhap.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.date_nhap.Properties.Mask.EditMask = "g";
+            this.date_nhap.Properties.Mask.EditMask = "MM/dd/yyyy HH:mm:ss";
             this.date_nhap.Size = new System.Drawing.Size(195, 20);
             this.date_nhap.StyleController = this.layoutControl1;
             this.date_nhap.TabIndex = 7;
@@ -590,7 +590,7 @@
             this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.Caption = "Ngày nhập";
-            this.gridColumn8.DisplayFormat.FormatString = "g";
+            this.gridColumn8.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn8.FieldName = "ngaynhap";
             this.gridColumn8.Name = "gridColumn8";
