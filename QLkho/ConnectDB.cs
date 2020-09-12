@@ -25,7 +25,7 @@ namespace QLkho
                 connect.Open();  //mở kết nối
             }
             catch (Exception ex)
-            {  //nếu không kết nối được
+            {  //nếu không kết nối được xx
                 XtraMessageBox.Show(ex.Message.ToString());   //hiện thông báo lỗi ngoại lê
             }
             return connect; //trả về biến kết nối
