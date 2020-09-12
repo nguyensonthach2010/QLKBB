@@ -49,6 +49,8 @@
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -64,14 +66,12 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.SkinHT = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -269,6 +269,23 @@
             this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
             this.barButtonItem13.Name = "barButtonItem13";
             // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Nhập";
+            this.barButtonItem14.Id = 19;
+            this.barButtonItem14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.Image")));
+            this.barButtonItem14.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.LargeImage")));
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
+            // 
+            // barButtonItem15
+            // 
+            this.barButtonItem15.Caption = "Xuất";
+            this.barButtonItem15.Id = 20;
+            this.barButtonItem15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.Image")));
+            this.barButtonItem15.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.LargeImage")));
+            this.barButtonItem15.Name = "barButtonItem15";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -377,6 +394,15 @@
             this.ribbonPageGroup12.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Collapsed;
             this.ribbonPageGroup12.Text = "Theo ngày";
             // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup13.ImageOptions.Image")));
+            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem15);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Collapsed;
+            this.ribbonPageGroup13.Text = "Theo mặt hàng";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -407,31 +433,6 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // ribbonPageGroup13
-            // 
-            this.ribbonPageGroup13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup13.ImageOptions.Image")));
-            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem14);
-            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem15);
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Collapsed;
-            this.ribbonPageGroup13.Text = "Theo mặt hàng";
-            // 
-            // barButtonItem14
-            // 
-            this.barButtonItem14.Caption = "Nhập";
-            this.barButtonItem14.Id = 19;
-            this.barButtonItem14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.Image")));
-            this.barButtonItem14.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.LargeImage")));
-            this.barButtonItem14.Name = "barButtonItem14";
-            // 
-            // barButtonItem15
-            // 
-            this.barButtonItem15.Caption = "Xuất";
-            this.barButtonItem15.Id = 20;
-            this.barButtonItem15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.Image")));
-            this.barButtonItem15.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.LargeImage")));
-            this.barButtonItem15.Name = "barButtonItem15";
             // 
             // Form1
             // 

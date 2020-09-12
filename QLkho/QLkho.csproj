@@ -121,6 +121,12 @@
     <Compile Include="frmNhap.Designer.cs">
       <DependentUpon>frmNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_RPHN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPHN.Designer.cs">
+      <DependentUpon>frm_RPHN.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_RPN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhap.resx">
       <DependentUpon>frmNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPHN.resx">
+      <DependentUpon>frm_RPHN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_RPN.resx">
       <DependentUpon>frm_RPN.cs</DependentUpon>

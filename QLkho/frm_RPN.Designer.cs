@@ -350,7 +350,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.layoutControl1);
             this.Name = "frm_RPN";
-            this.Text = "Tạo báo cáo theo ngày";
+            this.Text = "Tạo báo cáo theo ngày nhập";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtdatekt.Properties.CalendarTimeProperties)).EndInit();

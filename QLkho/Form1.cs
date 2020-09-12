@@ -123,5 +123,10 @@ namespace QLkho
             frm_RPN rp1 = new frm_RPN();
             rp1.ShowDialog();
         }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }
