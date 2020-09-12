@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLKhoBBModelStoreContainer" CdmEntityContainer="QLKhoBBEntities">
+    <EntitySetMapping Name="reports">
+      <EntityTypeMapping TypeName="QLKhoBBModel.report">
+        <MappingFragment StoreEntitySet="report">
+          <ScalarProperty Name="sohd" ColumnName="sohd" />
+          <ScalarProperty Name="mavt" ColumnName="mavt" />
+          <ScalarProperty Name="barcodenhap" ColumnName="barcodenhap" />
+          <ScalarProperty Name="slnhap" ColumnName="slnhap" />
+          <ScalarProperty Name="dvt" ColumnName="dvt" />
+          <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="dvgiaonhan" ColumnName="dvgiaonhan" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

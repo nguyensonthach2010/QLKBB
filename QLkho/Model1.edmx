@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLKhoBBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="report">
+          <Key>
+            <PropertyRef Name="sohd" />
+            <PropertyRef Name="mavt" />
+            <PropertyRef Name="barcodenhap" />
+            <PropertyRef Name="slnhap" />
+            <PropertyRef Name="dvt" />
+            <PropertyRef Name="ngaynhap" />
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="dvgiaonhan" />
+            <PropertyRef Name="ghichu" />
+          </Key>
+          <Property Name="sohd" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mavt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="barcodenhap" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="slnhap" Type="int" Nullable="false" />
+          <Property Name="dvt" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ngaynhap" Type="datetime" Nullable="false" />
+          <Property Name="manv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dvgiaonhan" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ghichu" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QLKhoBBModelStoreContainer">
+          <EntitySet Name="report" EntityType="Self.report" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[report].[sohd] AS [sohd], 
+[report].[mavt] AS [mavt], 
+[report].[barcodenhap] AS [barcodenhap], 
+[report].[slnhap] AS [slnhap], 
+[report].[dvt] AS [dvt], 
+[report].[ngaynhap] AS [ngaynhap], 
+[report].[manv] AS [manv], 
+[report].[dvgiaonhan] AS [dvgiaonhan], 
+[report].[ghichu] AS [ghichu]
+FROM [dbo].[report] AS [report]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLKhoBBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="report">
+          <Key>
+            <PropertyRef Name="sohd" />
+            <PropertyRef Name="mavt" />
+            <PropertyRef Name="barcodenhap" />
+            <PropertyRef Name="slnhap" />
+            <PropertyRef Name="dvt" />
+            <PropertyRef Name="ngaynhap" />
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="dvgiaonhan" />
+            <PropertyRef Name="ghichu" />
+          </Key>
+          <Property Name="sohd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mavt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="barcodenhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="slnhap" Type="Int32" Nullable="false" />
+          <Property Name="dvt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ngaynhap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="manv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dvgiaonhan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ghichu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QLKhoBBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="reports" EntityType="Self.report" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLKhoBBModelStoreContainer" CdmEntityContainer="QLKhoBBEntities">
+          <EntitySetMapping Name="reports">
+            <EntityTypeMapping TypeName="QLKhoBBModel.report">
+              <MappingFragment StoreEntitySet="report">
+                <ScalarProperty Name="sohd" ColumnName="sohd" />
+                <ScalarProperty Name="mavt" ColumnName="mavt" />
+                <ScalarProperty Name="barcodenhap" ColumnName="barcodenhap" />
+                <ScalarProperty Name="slnhap" ColumnName="slnhap" />
+                <ScalarProperty Name="dvt" ColumnName="dvt" />
+                <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="dvgiaonhan" ColumnName="dvgiaonhan" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

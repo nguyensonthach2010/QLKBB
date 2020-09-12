@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
+using DevExpress.XtraReports.UI;
 
 namespace QLkho
 {
@@ -214,6 +216,20 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Không tìm thấy thông tin hàng có barcode này trong CSDL");
             }
+        }
+
+        private void simpleButton9_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from NhapKho where sohd  = '"+txtmahd.Text+"'",con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            XtraReport1 rp = new XtraReport1();
+            rp.DataSource = dt;
+            rp.ShowPreviewDialog();
         }
     }
 }

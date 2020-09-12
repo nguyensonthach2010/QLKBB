@@ -33,6 +33,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
@@ -134,6 +135,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton9);
             this.panel1.Controls.Add(this.simpleButton7);
             this.panel1.Controls.Add(this.simpleButton6);
             this.panel1.Controls.Add(this.simpleButton4);
@@ -147,10 +149,20 @@
             this.panel1.Size = new System.Drawing.Size(1037, 55);
             this.panel1.TabIndex = 2;
             // 
+            // simpleButton9
+            // 
+            this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+            this.simpleButton9.Location = new System.Drawing.Point(916, 10);
+            this.simpleButton9.Name = "simpleButton9";
+            this.simpleButton9.Size = new System.Drawing.Size(85, 34);
+            this.simpleButton9.TabIndex = 6;
+            this.simpleButton9.Text = "In PN";
+            this.simpleButton9.Click += new System.EventHandler(this.simpleButton9_Click);
+            // 
             // simpleButton7
             // 
             this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
-            this.simpleButton7.Location = new System.Drawing.Point(887, 10);
+            this.simpleButton7.Location = new System.Drawing.Point(797, 10);
             this.simpleButton7.Name = "simpleButton7";
             this.simpleButton7.Size = new System.Drawing.Size(85, 34);
             this.simpleButton7.TabIndex = 1;
@@ -160,7 +172,7 @@
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(747, 10);
+            this.simpleButton6.Location = new System.Drawing.Point(663, 10);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(85, 34);
             this.simpleButton6.TabIndex = 1;
@@ -170,7 +182,7 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(594, 10);
+            this.simpleButton4.Location = new System.Drawing.Point(546, 10);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(85, 34);
             this.simpleButton4.TabIndex = 1;
@@ -180,7 +192,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(443, 10);
+            this.simpleButton5.Location = new System.Drawing.Point(416, 10);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(85, 34);
             this.simpleButton5.TabIndex = 2;
@@ -190,7 +202,7 @@
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(301, 10);
+            this.simpleButton3.Location = new System.Drawing.Point(291, 10);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(85, 34);
             this.simpleButton3.TabIndex = 3;
@@ -200,7 +212,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(157, 10);
+            this.simpleButton2.Location = new System.Drawing.Point(177, 10);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(85, 34);
             this.simpleButton2.TabIndex = 4;
@@ -210,7 +222,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(17, 10);
+            this.simpleButton1.Location = new System.Drawing.Point(44, 10);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(89, 34);
             this.simpleButton1.TabIndex = 5;
@@ -730,5 +742,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton9;
     }
 }
