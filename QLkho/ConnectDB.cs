@@ -16,7 +16,7 @@ namespace QLkho
         //tạo biến kết nối
         static SqlConnection connect;
 
-        //hàm mở kết nối
+        //hàm mở kết nối database
         public static SqlConnection Open()
         {
             connect = new SqlConnection(connString); //khai báo một biến kết nối mới với giá trị truyền vào là Chuỗi connString
