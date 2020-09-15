@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLKhoBBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLKhoBBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="report">
@@ -29,6 +29,30 @@ warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key de
           <Property Name="dvgiaonhan" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="ghichu" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLKhoBB.dbo.reportx' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="reportx">
+          <Key>
+            <PropertyRef Name="sohd" />
+            <PropertyRef Name="mavt" />
+            <PropertyRef Name="barcodexuat" />
+            <PropertyRef Name="slxuat" />
+            <PropertyRef Name="dvt" />
+            <PropertyRef Name="ngayxuat" />
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="dvgiaonhan" />
+            <PropertyRef Name="ghichu" />
+          </Key>
+          <Property Name="sohd" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mavt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="barcodexuat" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="slxuat" Type="int" Nullable="false" />
+          <Property Name="dvt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ngayxuat" Type="datetime" Nullable="false" />
+          <Property Name="manv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dvgiaonhan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ghichu" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="QLKhoBBModelStoreContainer">
           <EntitySet Name="report" EntityType="Self.report" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -43,9 +67,21 @@ warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key de
 [report].[ghichu] AS [ghichu]
 FROM [dbo].[report] AS [report]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="reportx" EntityType="Self.reportx" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[reportx].[sohd] AS [sohd], 
+[reportx].[mavt] AS [mavt], 
+[reportx].[barcodexuat] AS [barcodexuat], 
+[reportx].[slxuat] AS [slxuat], 
+[reportx].[dvt] AS [dvt], 
+[reportx].[ngayxuat] AS [ngayxuat], 
+[reportx].[manv] AS [manv], 
+[reportx].[dvgiaonhan] AS [dvgiaonhan], 
+[reportx].[ghichu] AS [ghichu]
+FROM [dbo].[reportx] AS [reportx]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLKhoBBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -73,7 +109,30 @@ FROM [dbo].[report] AS [report]</DefiningQuery>
         </EntityType>
         <EntityContainer Name="QLKhoBBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="reports" EntityType="Self.report" />
+          <EntitySet Name="reportxes" EntityType="QLKhoBBModel.reportx" />
         </EntityContainer>
+        <EntityType Name="reportx">
+          <Key>
+            <PropertyRef Name="sohd" />
+            <PropertyRef Name="mavt" />
+            <PropertyRef Name="barcodexuat" />
+            <PropertyRef Name="slxuat" />
+            <PropertyRef Name="dvt" />
+            <PropertyRef Name="ngayxuat" />
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="dvgiaonhan" />
+            <PropertyRef Name="ghichu" />
+          </Key>
+          <Property Name="sohd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mavt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="barcodexuat" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="slxuat" Type="Int32" Nullable="false" />
+          <Property Name="dvt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngayxuat" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="manv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dvgiaonhan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ghichu" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -92,6 +151,21 @@ FROM [dbo].[report] AS [report]</DefiningQuery>
                 <ScalarProperty Name="manv" ColumnName="manv" />
                 <ScalarProperty Name="dvgiaonhan" ColumnName="dvgiaonhan" />
                 <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reportxes">
+            <EntityTypeMapping TypeName="QLKhoBBModel.reportx">
+              <MappingFragment StoreEntitySet="reportx">
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="dvgiaonhan" ColumnName="dvgiaonhan" />
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="ngayxuat" ColumnName="ngayxuat" />
+                <ScalarProperty Name="dvt" ColumnName="dvt" />
+                <ScalarProperty Name="slxuat" ColumnName="slxuat" />
+                <ScalarProperty Name="barcodexuat" ColumnName="barcodexuat" />
+                <ScalarProperty Name="mavt" ColumnName="mavt" />
+                <ScalarProperty Name="sohd" ColumnName="sohd" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -35,14 +35,14 @@
             this.btn_thoat = new DevExpress.XtraEditors.SimpleButton();
             this.bnt_doimk = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtuser = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtpassht = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtpassmoi = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtxacnhan = new DevExpress.XtraEditors.TextEdit();
+            this.txtpassmoi = new DevExpress.XtraEditors.TextEdit();
+            this.txtpassht = new DevExpress.XtraEditors.TextEdit();
+            this.txtuser = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -50,14 +50,14 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtuser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpassht.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpassmoi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtxacnhan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpassmoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpassht.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtuser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +126,38 @@
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtxacnhan
+            // 
+            this.txtxacnhan.Location = new System.Drawing.Point(12, 224);
+            this.txtxacnhan.Name = "txtxacnhan";
+            this.txtxacnhan.Size = new System.Drawing.Size(295, 20);
+            this.txtxacnhan.StyleController = this.layoutControl1;
+            this.txtxacnhan.TabIndex = 4;
+            // 
+            // txtpassmoi
+            // 
+            this.txtpassmoi.Location = new System.Drawing.Point(12, 165);
+            this.txtpassmoi.Name = "txtpassmoi";
+            this.txtpassmoi.Size = new System.Drawing.Size(295, 20);
+            this.txtpassmoi.StyleController = this.layoutControl1;
+            this.txtpassmoi.TabIndex = 4;
+            // 
+            // txtpassht
+            // 
+            this.txtpassht.Location = new System.Drawing.Point(12, 106);
+            this.txtpassht.Name = "txtpassht";
+            this.txtpassht.Size = new System.Drawing.Size(295, 20);
+            this.txtpassht.StyleController = this.layoutControl1;
+            this.txtpassht.TabIndex = 4;
+            // 
+            // txtuser
+            // 
+            this.txtuser.Location = new System.Drawing.Point(12, 47);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(295, 20);
+            this.txtuser.StyleController = this.layoutControl1;
+            this.txtuser.TabIndex = 4;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -138,14 +170,6 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(319, 268);
             this.Root.TextVisible = false;
-            // 
-            // txtuser
-            // 
-            this.txtuser.Location = new System.Drawing.Point(12, 47);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(295, 20);
-            this.txtuser.StyleController = this.layoutControl1;
-            this.txtuser.TabIndex = 4;
             // 
             // layoutControlItem1
             // 
@@ -160,15 +184,6 @@
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(176, 32);
             // 
-            // txtpassht
-            // 
-            this.txtpassht.Location = new System.Drawing.Point(12, 106);
-            this.txtpassht.Name = "txtpassht";
-            this.txtpassht.Properties.UseSystemPasswordChar = true;
-            this.txtpassht.Size = new System.Drawing.Size(295, 20);
-            this.txtpassht.StyleController = this.layoutControl1;
-            this.txtpassht.TabIndex = 4;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtpassht;
@@ -179,15 +194,6 @@
             this.layoutControlItem2.Text = "Password hiện tại :";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(176, 32);
-            // 
-            // txtpassmoi
-            // 
-            this.txtpassmoi.Location = new System.Drawing.Point(12, 165);
-            this.txtpassmoi.Name = "txtpassmoi";
-            this.txtpassmoi.Properties.UseSystemPasswordChar = true;
-            this.txtpassmoi.Size = new System.Drawing.Size(295, 20);
-            this.txtpassmoi.StyleController = this.layoutControl1;
-            this.txtpassmoi.TabIndex = 4;
             // 
             // layoutControlItem3
             // 
@@ -201,15 +207,6 @@
             this.layoutControlItem3.Text = "Password mới :";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(176, 32);
-            // 
-            // txtxacnhan
-            // 
-            this.txtxacnhan.Location = new System.Drawing.Point(12, 224);
-            this.txtxacnhan.Name = "txtxacnhan";
-            this.txtxacnhan.Properties.UseSystemPasswordChar = true;
-            this.txtxacnhan.Size = new System.Drawing.Size(295, 20);
-            this.txtxacnhan.StyleController = this.layoutControl1;
-            this.txtxacnhan.TabIndex = 4;
             // 
             // layoutControlItem4
             // 
@@ -244,14 +241,14 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtuser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpassht.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpassmoi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtxacnhan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpassmoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpassht.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtuser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 

@@ -8,24 +8,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
-using DevExpress.XtraReports.UI;
 using System.Data.SqlClient;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.Drawing;
+using DevExpress.XtraGrid;
 
 namespace QLkho
 {
-    public partial class frm_RPN : DevExpress.XtraEditors.XtraForm
+    public partial class frm_RPHX : DevExpress.XtraEditors.XtraForm
     {
-        public frm_RPN()
+        public frm_RPHX()
         {
             InitializeComponent();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string sql = "select sohd, mavt ,barcodenhap, slnhap, dvt, ngaynhap, manv, dvgiaonhan, ghichu from NhapKho where NhapKho.ngaynhap >='" + Convert.ToDateTime(txtdatebd.Text).ToString("MM/dd/yyyy HH:mm:ss")+"' and NhapKho.ngaynhap<='"+ Convert.ToDateTime(txtdatekt.Text).ToString("MM/dd/yyyy HH:mm:ss") + "'";
+            string sql = "select sohd, mavt ,barcodexuat, slxuat, dvt, ngayxuat, manv, dvgiaonhan, ghichu from xuatKho where XuatKho.barcodexuat ='" + txtbarcode.Text + "' ";
             gridControl1.DataSource = ConnectDB.getTable(sql);
         }
 
@@ -33,12 +33,12 @@ namespace QLkho
         {
             SqlConnection con = new SqlConnection(@"Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select sohd, mavt ,barcodenhap, slnhap, dvt, ngaynhap, manv, dvgiaonhan, ghichu from NhapKho where NhapKho.ngaynhap >='" + Convert.ToDateTime(txtdatebd.Text).ToString("MM/dd/yyyy HH:mm:ss") + "' and NhapKho.ngaynhap<='" + Convert.ToDateTime(txtdatekt.Text).ToString("MM/dd/yyyy HH:mm:ss") + "'", con);
+            SqlCommand cmd = new SqlCommand("select sohd, mavt ,barcodexuat, slxuat, dvt, ngayxuat, manv, dvgiaonhan, ghichu from xuatKho where XuatKho.barcodexuat ='" + txtbarcode.Text + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             con.Close();
-            RPN rp = new RPN();
+            RPX rp = new RPX();
             rp.DataSource = dt;
             rp.ShowPreviewDialog();
         }

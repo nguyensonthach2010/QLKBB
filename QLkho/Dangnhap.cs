@@ -21,7 +21,7 @@ namespace QLkho
         {   //hàm kiểm tra dữ liệu nhập vào có rỗng hay k
             if (txtusername.Text == "" || txtpass.Text == "")
             {
-                MessageBox.Show("Bạn phải điền đầy đủ các trường !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Bạn phải điền đầy đủ các trường !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -40,11 +40,11 @@ namespace QLkho
 
                     if (data.Rows.Count <= 0)  //gọi hàm getTable từ lớp DbHelper có giá trị truyền vào là chuỗi lênh select để lấy thông tin từ bảng nếu có số dòng <= 0 thì:
                     {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Sai tài khoản hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else  //nếu số dòng lấy được > 0 thì :
                     {
-                        MessageBox.Show("Đăng nhập thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XtraMessageBox.Show("Đăng nhập thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Quyen.nhomnd = data.Rows[0]["nhomnd"].ToString();
                         tk = txtusername.Text;
                         this.Visible = false;  //cho form này ẩn đi

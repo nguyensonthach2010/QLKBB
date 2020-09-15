@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="d0a9d0faab5e4a0aa508eba65e41c2f6" Name="Diagram1">
         <EntityTypeShape EntityType="QLKhoBBModel.report" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKhoBBModel.reportx" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

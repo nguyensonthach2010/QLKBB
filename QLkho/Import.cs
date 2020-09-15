@@ -38,7 +38,7 @@ namespace QLkho
                         nhap1.barcodenhap = dt.Rows[i]["Barcode"].ToString();
                         nhap1.slnhap = dt.Rows[i]["Số lượng nhập"].ToString();
                         nhap1.dvt = dt.Rows[i]["Đơn vị tính"].ToString();
-                        nhap1.ngaynhap = Convert.ToDateTime(dt.Rows[i]["Ngày nhập"].ToString()).ToString("yyyy/dd/MM HH:mm:ss");                        
+                        nhap1.ngaynhap = Convert.ToDateTime(dt.Rows[i]["Ngày nhập"].ToString()).ToString("MM/dd/yyyy HH:mm:ss");                        
                         nhap1.manv = dt.Rows[i]["Người nhập"].ToString();
                         nhap1.dvgiaonhan = dt.Rows[i]["Đơn vị giao nhận"].ToString();
                         nhap1.ghichu = dt.Rows[i]["Ghi chú"].ToString();
@@ -81,7 +81,7 @@ namespace QLkho
                 }
             }catch
             {
-                XtraMessageBox.Show("Có lỗi xảy ra!. ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Có lỗi xảy ra! ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }

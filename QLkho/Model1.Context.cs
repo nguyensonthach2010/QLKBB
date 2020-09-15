@@ -26,5 +26,6 @@ namespace QLkho
         }
     
         public DbSet<report> reports { get; set; }
+        public DbSet<reportx> reportxes { get; set; }
     }
 }

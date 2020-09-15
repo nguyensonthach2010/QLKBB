@@ -24,6 +24,30 @@ warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key de
     <Property Name="dvgiaonhan" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="ghichu" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLKhoBB.dbo.reportx' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="reportx">
+    <Key>
+      <PropertyRef Name="sohd" />
+      <PropertyRef Name="mavt" />
+      <PropertyRef Name="barcodexuat" />
+      <PropertyRef Name="slxuat" />
+      <PropertyRef Name="dvt" />
+      <PropertyRef Name="ngayxuat" />
+      <PropertyRef Name="manv" />
+      <PropertyRef Name="dvgiaonhan" />
+      <PropertyRef Name="ghichu" />
+    </Key>
+    <Property Name="sohd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mavt" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="barcodexuat" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="slxuat" Type="int" Nullable="false" />
+    <Property Name="dvt" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ngayxuat" Type="datetime" Nullable="false" />
+    <Property Name="manv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dvgiaonhan" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ghichu" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="QLKhoBBModelStoreContainer">
     <EntitySet Name="report" EntityType="Self.report" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -37,6 +61,19 @@ warning 6002: The table/view 'QLKhoBB.dbo.report' does not have a primary key de
 [report].[dvgiaonhan] AS [dvgiaonhan], 
 [report].[ghichu] AS [ghichu]
 FROM [dbo].[report] AS [report]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="reportx" EntityType="Self.reportx" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[reportx].[sohd] AS [sohd], 
+[reportx].[mavt] AS [mavt], 
+[reportx].[barcodexuat] AS [barcodexuat], 
+[reportx].[slxuat] AS [slxuat], 
+[reportx].[dvt] AS [dvt], 
+[reportx].[ngayxuat] AS [ngayxuat], 
+[reportx].[manv] AS [manv], 
+[reportx].[dvgiaonhan] AS [dvgiaonhan], 
+[reportx].[ghichu] AS [ghichu]
+FROM [dbo].[reportx] AS [reportx]</DefiningQuery>
     </EntitySet>
   </EntityContainer>
 </Schema>

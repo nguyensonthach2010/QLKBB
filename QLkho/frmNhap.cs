@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.Drawing;
+using DevExpress.XtraGrid;
 
 namespace QLkho
 {
@@ -67,32 +70,78 @@ namespace QLkho
             txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "barcodenhap").ToString();
             date_nhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ngaynhap").ToString();
             txtghichu.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ghichu").ToString();
+            txtmvt.Enabled = true;
+            txttenvt.Enabled = true;
+            txtslnhap.Enabled = true;
+            txtghichu.Enabled = true;
+            txtdvtinh.Enabled = true;
+            txtdvgiaonhan.Enabled = true;
+            cb_user.Enabled = true;
+            date_nhap.Enabled = true;
+            txtmahd.Enabled = true;
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-            try
+            DialogResult tb = XtraMessageBox.Show("Bạn có muốn in phiếu nhập mặt hàng này sau khi nhập kho không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (tb == DialogResult.Yes)
             {
-                if (validate())
+                try
                 {
-                    string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','"+txtmvt.Text+"','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" +Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
+                    if (validate())
+                    {
+                        string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','" + txtmvt.Text + "','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" + Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
 
-                    if (ConnectDB.Query(sql) == -1)
-                    {
-                        XtraMessageBox.Show("Nhập không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        hien();
+                        if (ConnectDB.Query(sql) == -1)
+                        {
+                            XtraMessageBox.Show("Nhập không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            hien();
+                        }
                     }
                 }
-            }
-            catch
+                catch
+                {
+                    XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                SqlConnection con = new SqlConnection(@"Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from NhapKho where sohd  = '" + txtmahd.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                con.Close();
+                XtraReport1 rp = new XtraReport1();
+                rp.DataSource = dt;
+                rp.ShowPreviewDialog();  
+            }else
             {
-                XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
+                try
+                {
+                    if (validate())
+                    {
+                        string sql = "insert into NhapKho values('" + txtmahd.Text.Trim() + "','" + txtmvt.Text + "','" + txtbarcode.Text + "','" + txtslnhap.Text + "','" + txtdvtinh.Text + "','" + Convert.ToDateTime(date_nhap.Text).ToString("MM/dd/yyyy HH:mm:ss") + "',N'" + cb_user.EditValue.ToString() + "',N'" + txtdvgiaonhan.Text + "',N'" + txtghichu.Text + "')";
+
+                        if (ConnectDB.Query(sql) == -1)
+                        {
+                            XtraMessageBox.Show("Nhập không thành công (T_T) !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            hien();
+                        }
+                    }
+                }
+                catch
+                {
+                    XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }    
+
         }
 
         private void simpleButton4_Click_1(object sender, EventArgs e)
@@ -113,11 +162,20 @@ namespace QLkho
             txtbarcode.Text = "";
             date_nhap.Text = "";
             txtmvt.Text = "";
+            txtmvt.Enabled = false;
+            txttenvt.Enabled = false;
+            txtslnhap.Enabled = false;
+            txtmahd.Enabled = false;
+            txtghichu.Enabled = false;
+            txtdvtinh.Enabled = false;
+            txtdvgiaonhan.Enabled = false;
+            cb_user.Enabled = false;
+            date_nhap.Enabled = false;
         }
 
         private void simpleButton6_Click_1(object sender, EventArgs e)
         {
-            try
+                try
             {
                 string sql3 = "SELECT sohd , NhapKho.mavt, tenvt, barcodenhap,slnhap,dvt,ngaynhap,username,dvgiaonhan,ghichu FROM NhapKho INNER JOIN VatTu ON VatTu.mavt = NhapKho.mavt INNER JOIN NhanVien ON NhanVien.manv = NhapKho.manv";
                 SaveFileDialog saveFileDialogExcel = new SaveFileDialog();
@@ -146,6 +204,7 @@ namespace QLkho
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            
             try 
             {
                 if (validate())
@@ -206,10 +265,18 @@ namespace QLkho
             {
                 txttenvt.Text = tb.Rows[0]["tenvt"].ToString().Trim();
                 txtmvt.Text = tb.Rows[0]["mavt"].ToString().Trim();
-                DialogResult dr = XtraMessageBox.Show("Barcode có trong CSDL! Bạn có thể nhập các trường còn lại! ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dr = XtraMessageBox.Show("Barcode có trong CSDL! Bạn có muốn nhập các thông tin nhập còn lại không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-
+                    txtmvt.Enabled = true;
+                    txttenvt.Enabled = true;
+                    txtslnhap.Enabled = true;
+                    txtmahd.Enabled = true;
+                    txtghichu.Enabled = true;
+                    txtdvtinh.Enabled = true;
+                    txtdvgiaonhan.Enabled = true;
+                    cb_user.Enabled = true;
+                    date_nhap.Enabled = true;
                 }    
             }
             else
@@ -222,7 +289,7 @@ namespace QLkho
         {
             SqlConnection con = new SqlConnection(@"Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from NhapKho where sohd  = '"+txtmahd.Text+"'",con);
+            SqlCommand cmd = new SqlCommand("select * from NhapKho where sohd  = '" + txtmahd.Text + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -230,6 +297,62 @@ namespace QLkho
             XtraReport1 rp = new XtraReport1();
             rp.DataSource = dt;
             rp.ShowPreviewDialog();
+        }
+        bool indicatorIcon = true;
+
+        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            try
+            {
+                GridView view = (GridView)sender;
+                if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+                {
+                    string sText = (e.RowHandle + 1).ToString();
+                    Graphics gr = e.Info.Graphics;
+                    gr.PageUnit = GraphicsUnit.Pixel;
+                    GridView gridView = ((GridView)sender);
+                    SizeF size = gr.MeasureString(sText, e.Info.Appearance.Font);
+                    int nNewSize = Convert.ToInt32(size.Width) + GridPainter.Indicator.ImageSize.Width + 10;
+                    if (gridView.IndicatorWidth < nNewSize)
+                    {
+                        gridView.IndicatorWidth = nNewSize;
+                    }
+
+                    e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                    e.Info.DisplayText = sText;
+                }
+                if (!indicatorIcon)
+                    e.Info.ImageIndex = -1;
+
+                if (e.RowHandle == GridControl.InvalidRowHandle)
+                {
+                    Graphics gr = e.Info.Graphics;
+                    gr.PageUnit = GraphicsUnit.Pixel;
+                    GridView gridView = ((GridView)sender);
+                    SizeF size = gr.MeasureString("STT", e.Info.Appearance.Font);
+                    int nNewSize = Convert.ToInt32(size.Width) + GridPainter.Indicator.ImageSize.Width + 10;
+                    if (gridView.IndicatorWidth < nNewSize)
+                    {
+                        gridView.IndicatorWidth = nNewSize;
+                    }
+
+                    e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                    e.Info.DisplayText = "STT";
+                }
+            }
+            catch
+            {
+                XtraMessageBox.Show("Lỗi cột STT");
+            }
+        }
+
+        private void gridView1_RowCountChanged(object sender, EventArgs e)
+        {
+            GridView gridview = ((GridView)sender);
+            if (!gridview.GridControl.IsHandleCreated) return;
+            Graphics gr = Graphics.FromHwnd(gridview.GridControl.Handle);
+            SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
+            gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 10;
         }
     }
 }

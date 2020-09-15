@@ -51,7 +51,7 @@ namespace QLkho
             }
             catch
             {
-                XtraMessageBox.Show("Có lỗi xảy ra!. Lưu ý thoát file excel trước khi import và số hóa đơn không được trùng trong CSDL!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Có lỗi xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -59,9 +59,9 @@ namespace QLkho
         {
             try
             {
-                string conn = "Data Source=192.168.1.53,1433;Initial Catalog=QLKhoIT;User ID=sa;Password=123456789";
+                string conn = "Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789";
                 DapperPlusManager.Entity<Xuat>().Table("XuatKho");
-                List<Xuat> xuats = xuatkhoBindingSource.DataSource as List<Xuat>;
+                List<Xuat> xuats = xuatBindingSource.DataSource as List<Xuat>;
                 if (xuats != null)
                 {
                     using (IDbConnection db = new SqlConnection(conn))
@@ -77,7 +77,7 @@ namespace QLkho
             }
             catch
             {
-                XtraMessageBox.Show("Lưu ý thoát file excel trước khi import và số hóa đơn không được trùng trong CSDL", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Có lỗi xảy ra!. Không thể Import vào CSDL!. Lưu ý thoát file excel trước khi import và số hóa đơn không được trùng trong CSDL!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -91,19 +91,28 @@ namespace QLkho
                     List<Xuat> xuat = new List<Xuat>();
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        Xuat xuat1 = new Xuat();
-                        xuat1.sohd = dt.Rows[i]["Số hóa đơn"].ToString();
-                        xuat1.mavt = dt.Rows[i]["Mã vật tư"].ToString();
-                        xuat1.losx = dt.Rows[i]["Lô sản xuất"].ToString();
-                        xuat1.vitri = dt.Rows[i]["Vị trí"].ToString();
-                        xuat1.slxuat = dt.Rows[i]["Số lượng xuất"].ToString();
-                        xuat1.dgxuat = dt.Rows[i]["Đơn giá xuất (VNĐ)"].ToString();
-                        xuat1.ngayxuat = dt.Rows[i]["Ngày xuất"].ToString();
-                        xuat1.manv = dt.Rows[i]["Mã nhân viên"].ToString();
-                        xuat1.nguoixuat = dt.Rows[i]["Người nhận"].ToString();
-                        xuat.Add(xuat1);
+                        string sqln = @"select MaVT, TenVT, Barcode ,Sum(Nhap) as tongnhhap , SUM(Xuat) as tongxuat, (SUM(Nhap) - SUM(Xuat)) as Ton from (select mavt as MaVT, tenvt as TenVT, barcode as Barcode, 0 as Nhap, 0 as Xuat From VatTu union Select N.mavt as MaVT, H.tenvt as TenVT,  N.barcodenhap as Barcode, Sum(N.slnhap) as Nhap, 0 as Xuat  From NhapKho N, VatTu H Where N.mavt = H.mavt Group By N.mavt, H.tenvt, N.barcodenhap having SUM(N.slnhap) > 0 union Select X.mavt as MaVT, H.tenvt as TenVT, X.barcodexuat as Barcode, 0 as Nhap, Sum(X.slxuat) as Xuat   From XuatKho X, VatTu H Where X.mavt = H.mavt Group By X.mavt, H.tenvt, X.barcodexuat having SUM(X.slxuat) > 0) as hangton where Barcode = '" + dt.Rows[i]["Barcode"].ToString() + "' Group by MaVT, TenVT, Barcode";
+                        DataTable dat = ConnectDB.getTable(sqln);
+                        if (dat.Rows.Count > 0 && Convert.ToInt64(dat.Rows[0]["Ton"].ToString()) >= Convert.ToInt64(dt.Rows[i]["Số lượng xuất"].ToString()))
+                        {
+                            Xuat xuat1 = new Xuat();
+                            xuat1.sohd = dt.Rows[i]["Số hóa đơn"].ToString();
+                            xuat1.mavt = dt.Rows[i]["Mã hàng"].ToString();
+                            xuat1.barcodexuat = dt.Rows[i]["Barcode"].ToString();
+                            xuat1.slxuat = dt.Rows[i]["Số lượng xuất"].ToString();
+                            xuat1.dvt = dt.Rows[i]["Đơn vị tính"].ToString();
+                            xuat1.ngayxuat = Convert.ToDateTime(dt.Rows[i]["Ngày xuất"].ToString()).ToString("MM/dd/yyyy HH:mm:ss");
+                            xuat1.manv = dt.Rows[i]["Người xuất"].ToString();
+                            xuat1.dvgiaonhan = dt.Rows[i]["Đơn vị giao nhận"].ToString();
+                            xuat1.ghichu = dt.Rows[i]["Ghi chú"].ToString();
+                            xuat.Add(xuat1);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Số lượng xuất không được vượt quá lượng tồn trong kho!");
+                        }
                     }
-                    xuatkhoBindingSource.DataSource = xuat;
+                    xuatBindingSource.DataSource = xuat;
                 }
             }
             catch

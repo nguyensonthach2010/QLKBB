@@ -16,5 +16,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="reportxes">
+      <EntityTypeMapping TypeName="QLKhoBBModel.reportx">
+        <MappingFragment StoreEntitySet="reportx">
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+          <ScalarProperty Name="dvgiaonhan" ColumnName="dvgiaonhan" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="ngayxuat" ColumnName="ngayxuat" />
+          <ScalarProperty Name="dvt" ColumnName="dvt" />
+          <ScalarProperty Name="slxuat" ColumnName="slxuat" />
+          <ScalarProperty Name="barcodexuat" ColumnName="barcodexuat" />
+          <ScalarProperty Name="mavt" ColumnName="mavt" />
+          <ScalarProperty Name="sohd" ColumnName="sohd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -56,6 +56,7 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
@@ -76,7 +77,6 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -163,6 +163,7 @@
             // 
             // cb_user
             // 
+            this.cb_user.Enabled = false;
             this.cb_user.Location = new System.Drawing.Point(133, 84);
             this.cb_user.Name = "cb_user";
             this.cb_user.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -176,6 +177,7 @@
             // 
             // txtmahd
             // 
+            this.txtmahd.Enabled = false;
             this.txtmahd.Location = new System.Drawing.Point(133, 48);
             this.txtmahd.Name = "txtmahd";
             this.txtmahd.Size = new System.Drawing.Size(203, 20);
@@ -184,22 +186,27 @@
             // 
             // txtmvt
             // 
+            this.txtmvt.Enabled = false;
             this.txtmvt.Location = new System.Drawing.Point(461, 12);
             this.txtmvt.Name = "txtmvt";
+            this.txtmvt.Properties.ReadOnly = true;
             this.txtmvt.Size = new System.Drawing.Size(79, 20);
             this.txtmvt.StyleController = this.layoutControl2;
             this.txtmvt.TabIndex = 13;
             // 
             // txttenvt
             // 
+            this.txttenvt.Enabled = false;
             this.txttenvt.Location = new System.Drawing.Point(665, 12);
             this.txttenvt.Name = "txttenvt";
+            this.txttenvt.Properties.ReadOnly = true;
             this.txttenvt.Size = new System.Drawing.Size(343, 20);
             this.txttenvt.StyleController = this.layoutControl2;
             this.txttenvt.TabIndex = 4;
             // 
             // txtslnhap
             // 
+            this.txtslnhap.Enabled = false;
             this.txtslnhap.Location = new System.Drawing.Point(461, 48);
             this.txtslnhap.Name = "txtslnhap";
             this.txtslnhap.Size = new System.Drawing.Size(79, 20);
@@ -208,6 +215,7 @@
             // 
             // txtdvgiaonhan
             // 
+            this.txtdvgiaonhan.Enabled = false;
             this.txtdvgiaonhan.Location = new System.Drawing.Point(461, 84);
             this.txtdvgiaonhan.Name = "txtdvgiaonhan";
             this.txtdvgiaonhan.Size = new System.Drawing.Size(283, 20);
@@ -216,6 +224,7 @@
             // 
             // txtghichu
             // 
+            this.txtghichu.Enabled = false;
             this.txtghichu.Location = new System.Drawing.Point(869, 84);
             this.txtghichu.Name = "txtghichu";
             this.txtghichu.Size = new System.Drawing.Size(139, 20);
@@ -225,6 +234,7 @@
             // date_nhap
             // 
             this.date_nhap.EditValue = null;
+            this.date_nhap.Enabled = false;
             this.date_nhap.Location = new System.Drawing.Point(869, 48);
             this.date_nhap.Name = "date_nhap";
             this.date_nhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -242,6 +252,7 @@
             // 
             // txtdvtinh
             // 
+            this.txtdvtinh.Enabled = false;
             this.txtdvtinh.Location = new System.Drawing.Point(665, 48);
             this.txtdvtinh.Name = "txtdvtinh";
             this.txtdvtinh.Size = new System.Drawing.Size(79, 20);
@@ -425,11 +436,23 @@
             this.panelControl2.Size = new System.Drawing.Size(1037, 60);
             this.panelControl2.TabIndex = 3;
             // 
+            // simpleButton9
+            // 
+            this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+            this.simpleButton9.Location = new System.Drawing.Point(940, 13);
+            this.simpleButton9.Name = "simpleButton9";
+            this.simpleButton9.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton9.Size = new System.Drawing.Size(85, 34);
+            this.simpleButton9.TabIndex = 13;
+            this.simpleButton9.Text = "In PX ";
+            this.simpleButton9.Click += new System.EventHandler(this.simpleButton9_Click);
+            // 
             // simpleButton7
             // 
             this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
             this.simpleButton7.Location = new System.Drawing.Point(816, 13);
             this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton7.Size = new System.Drawing.Size(85, 34);
             this.simpleButton7.TabIndex = 6;
             this.simpleButton7.Text = "Import";
@@ -440,6 +463,7 @@
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
             this.simpleButton6.Location = new System.Drawing.Point(682, 13);
             this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton6.Size = new System.Drawing.Size(85, 34);
             this.simpleButton6.TabIndex = 7;
             this.simpleButton6.Text = "Export";
@@ -450,6 +474,7 @@
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
             this.simpleButton4.Location = new System.Drawing.Point(539, 13);
             this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton4.Size = new System.Drawing.Size(85, 34);
             this.simpleButton4.TabIndex = 8;
             this.simpleButton4.Text = "Làm mới";
@@ -460,9 +485,10 @@
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
             this.simpleButton5.Location = new System.Drawing.Point(408, 13);
             this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton5.Size = new System.Drawing.Size(85, 34);
             this.simpleButton5.TabIndex = 9;
-            this.simpleButton5.Text = "Hủy";
+            this.simpleButton5.Text = "Reload";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton3
@@ -470,6 +496,7 @@
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(281, 13);
             this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton3.Size = new System.Drawing.Size(85, 34);
             this.simpleButton3.TabIndex = 10;
             this.simpleButton3.Text = "Xóa";
@@ -480,6 +507,7 @@
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(150, 13);
             this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton2.Size = new System.Drawing.Size(85, 34);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "Sửa";
@@ -490,9 +518,10 @@
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(29, 13);
             this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(89, 34);
             this.simpleButton1.TabIndex = 12;
-            this.simpleButton1.Text = "Nhập Kho";
+            this.simpleButton1.Text = "Xuất Kho";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panelControl3
@@ -530,9 +559,12 @@
             this.gridColumn7,
             this.gridColumn10});
             this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.GroupPanelText = "Danh sách nhập kho";
+            this.gridView1.GroupPanelText = "Danh sách xuất kho";
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView1_CustomDrawRowIndicator);
+            this.gridView1.RowCountChanged += new System.EventHandler(this.gridView1_RowCountChanged);
             // 
             // gridColumn1
             // 
@@ -635,15 +667,6 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
-            // 
-            // simpleButton9
-            // 
-            this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
-            this.simpleButton9.Location = new System.Drawing.Point(940, 13);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(85, 34);
-            this.simpleButton9.TabIndex = 13;
-            this.simpleButton9.Text = "In PX";
             // 
             // Xuatkho
             // 

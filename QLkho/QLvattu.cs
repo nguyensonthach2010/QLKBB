@@ -129,9 +129,9 @@ namespace QLkho
         private void gridControl1_Click(object sender, EventArgs e)
         {
             txtmavt.ReadOnly = true;
-            txtmavt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "mavt").ToString();
-            txttenvt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "tenvt").ToString();
-            txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "barcode").ToString();
+            txtmavt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MaVT").ToString();
+            txttenvt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenVT").ToString();
+            txtbarcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Barcode").ToString();
         }
         private bool validate()
         {   //hàm kiểm tra dữ liệu nhập vào có rỗng hay k
@@ -150,8 +150,16 @@ namespace QLkho
         {
             try
             {
-                string sql = "select *from VatTu";
-                gridControl1.DataSource = ConnectDB.getTable(sql);
+                try
+                {
+                    string sql = "select MaVT, TenVT, Barcode ,Sum(Nhap) as tongnhhap , SUM(Xuat) as tongxuat, (SUM(Nhap) - SUM(Xuat)) as Ton from (select mavt as MaVT, tenvt as TenVT, barcode as Barcode, 0 as Nhap, 0 as Xuat From VatTu union Select N.mavt as MaVT, H.tenvt as TenVT,  N.barcodenhap as Barcode, Sum(N.slnhap) as Nhap, 0 as Xuat  From NhapKho N, VatTu H Where N.mavt = H.mavt Group By N.mavt, H.tenvt, N.barcodenhap having SUM(N.slnhap) > 0 union Select X.mavt as MaVT, H.tenvt as TenVT, X.barcodexuat as Barcode, 0 as Nhap, Sum(X.slxuat) as Xuat   From XuatKho X, VatTu H Where X.mavt = H.mavt Group By X.mavt, H.tenvt, X.barcodexuat having SUM(X.slxuat) > 0) as hangton Group by MaVT, TenVT, Barcode";
+                    gridControl1.DataSource = ConnectDB.getTable(sql);
+
+                }
+                catch
+                {
+                    XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
             }
             catch

@@ -92,7 +92,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(582, 39);
+            this.panelControl1.Size = new System.Drawing.Size(577, 39);
             this.panelControl1.TabIndex = 0;
             // 
             // labelControl1
@@ -113,10 +113,10 @@
             this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 420);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 413);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(582, 85);
+            this.layoutControl1.Size = new System.Drawing.Size(577, 85);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -124,9 +124,9 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(450, 12);
+            this.simpleButton2.Location = new System.Drawing.Point(446, 12);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(103, 22);
+            this.simpleButton2.Size = new System.Drawing.Size(102, 22);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 6;
             this.simpleButton2.Text = "Brownse";
@@ -137,9 +137,9 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(450, 38);
+            this.simpleButton1.Location = new System.Drawing.Point(446, 38);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(103, 36);
+            this.simpleButton1.Size = new System.Drawing.Size(102, 36);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Import";
@@ -151,7 +151,7 @@
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(349, 20);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(345, 20);
             this.comboBoxEdit1.StyleController = this.layoutControl1;
             this.comboBoxEdit1.TabIndex = 5;
             this.comboBoxEdit1.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
@@ -161,7 +161,7 @@
             this.textEdit1.Location = new System.Drawing.Point(97, 12);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(349, 20);
+            this.textEdit1.Size = new System.Drawing.Size(345, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 4;
             // 
@@ -175,7 +175,7 @@
             this.layoutControlItem4,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(565, 92);
+            this.Root.Size = new System.Drawing.Size(560, 92);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -186,7 +186,7 @@
             this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(438, 36);
+            this.layoutControlItem1.Size = new System.Drawing.Size(434, 36);
             this.layoutControlItem1.Text = "File name";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 32);
             // 
@@ -198,16 +198,16 @@
             this.layoutControlItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem2.ImageOptions.Image")));
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 36);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(438, 36);
+            this.layoutControlItem2.Size = new System.Drawing.Size(434, 36);
             this.layoutControlItem2.Text = "Sheet";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(82, 32);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(438, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(434, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(107, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(106, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -216,9 +216,9 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.simpleButton1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(438, 26);
+            this.layoutControlItem3.Location = new System.Drawing.Point(434, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(107, 46);
+            this.layoutControlItem3.Size = new System.Drawing.Size(106, 46);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -228,7 +228,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 39);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(582, 381);
+            this.panelControl2.Size = new System.Drawing.Size(577, 374);
             this.panelControl2.TabIndex = 2;
             // 
             // dataGridView1
@@ -263,7 +263,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(578, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(573, 370);
             this.dataGridView1.TabIndex = 8;
             // 
             // sohd
@@ -280,7 +280,7 @@
             // 
             // barcodenhap
             // 
-            this.barcodenhap.DataPropertyName = "barcodenhap";
+            this.barcodenhap.DataPropertyName = "barcodenhao";
             this.barcodenhap.HeaderText = "Barcode";
             this.barcodenhap.Name = "barcodenhap";
             // 
@@ -394,7 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 505);
+            this.ClientSize = new System.Drawing.Size(577, 498);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.panelControl1);
@@ -443,6 +443,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource nhapkhoBindingSource;
         private System.Windows.Forms.BindingSource nhapBindingSource;
+        private System.Windows.Forms.BindingSource frmNhapBindingSource;
+        private System.Windows.Forms.BindingSource nhapBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohd;
         private System.Windows.Forms.DataGridViewTextBoxColumn mavt;
         private System.Windows.Forms.DataGridViewTextBoxColumn barcodenhap;
@@ -452,7 +454,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dvgiaonhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
-        private System.Windows.Forms.BindingSource frmNhapBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mavtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn barcodenhapDataGridViewTextBoxColumn;
@@ -462,6 +463,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manvDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dvgiaonhanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghichuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource nhapBindingSource1;
     }
 }

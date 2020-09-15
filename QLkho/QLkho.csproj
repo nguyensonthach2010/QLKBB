@@ -127,11 +127,23 @@
     <Compile Include="frm_RPHN.Designer.cs">
       <DependentUpon>frm_RPHN.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_RPHX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPHX.Designer.cs">
+      <DependentUpon>frm_RPHX.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_RPN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_RPN.Designer.cs">
       <DependentUpon>frm_RPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_RPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RPX.Designer.cs">
+      <DependentUpon>frm_RPX.cs</DependentUpon>
     </Compile>
     <Compile Include="Import.cs">
       <SubType>Form</SubType>
@@ -179,6 +191,9 @@
     <Compile Include="report.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="reportx.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Restore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +205,12 @@
     </Compile>
     <Compile Include="RPN.Designer.cs">
       <DependentUpon>RPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPX.Designer.cs">
+      <DependentUpon>RPX.cs</DependentUpon>
     </Compile>
     <Compile Include="Theokics.cs">
       <SubType>Form</SubType>
@@ -208,6 +229,12 @@
     </Compile>
     <Compile Include="XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
     <Compile Include="Xuat.cs" />
     <Compile Include="Xuatkho.cs">
@@ -234,8 +261,14 @@
     <EmbeddedResource Include="frm_RPHN.resx">
       <DependentUpon>frm_RPHN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPHX.resx">
+      <DependentUpon>frm_RPHX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_RPN.resx">
       <DependentUpon>frm_RPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RPX.resx">
+      <DependentUpon>frm_RPX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Import.resx">
       <DependentUpon>Import.cs</DependentUpon>
@@ -243,7 +276,6 @@
     <EmbeddedResource Include="Importx.resx">
       <DependentUpon>Importx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -265,6 +297,9 @@
     <EmbeddedResource Include="RPN.resx">
       <DependentUpon>RPN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RPX.resx">
+      <DependentUpon>RPX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Theokics.resx">
       <DependentUpon>Theokics.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
@@ -289,6 +327,7 @@
     <None Include="Properties\DataSources\frmNhap.datasource" />
     <None Include="Properties\DataSources\Nhap.datasource" />
     <None Include="Properties\DataSources\Nhapkho.datasource" />
+    <None Include="Properties\DataSources\Xuat.datasource" />
     <None Include="Properties\DataSources\Xuatkho.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

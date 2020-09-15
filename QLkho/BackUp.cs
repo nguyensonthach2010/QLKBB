@@ -38,9 +38,9 @@ namespace QLkho
                 }
                 else
                 {
-                    string sql =  "BACKUP DATABASE [QLKhoIT] TO DISK ='"+textEdit11.Text+"\\"+"DATABASE"+"-"+DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") +".bak'";
+                    string sql =  "BACKUP DATABASE [QLKhoBB] TO DISK ='"+textEdit11.Text+"\\"+"DATABASE"+"-"+DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") +".bak'";
                     ConnectDB.Query(sql);
-                    XtraMessageBox.Show("Back up dữ liệu thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Back up dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     simpleButton2.Enabled = false;
                 }    
             }catch

@@ -24,5 +24,28 @@
   </EntityType>
   <EntityContainer Name="QLKhoBBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="reports" EntityType="Self.report" />
+    <EntitySet Name="reportxes" EntityType="QLKhoBBModel.reportx" />
   </EntityContainer>
+  <EntityType Name="reportx">
+    <Key>
+      <PropertyRef Name="sohd" />
+      <PropertyRef Name="mavt" />
+      <PropertyRef Name="barcodexuat" />
+      <PropertyRef Name="slxuat" />
+      <PropertyRef Name="dvt" />
+      <PropertyRef Name="ngayxuat" />
+      <PropertyRef Name="manv" />
+      <PropertyRef Name="dvgiaonhan" />
+      <PropertyRef Name="ghichu" />
+    </Key>
+    <Property Name="sohd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mavt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="barcodexuat" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="slxuat" Type="Int32" Nullable="false" />
+    <Property Name="dvt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ngayxuat" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="manv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dvgiaonhan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ghichu" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

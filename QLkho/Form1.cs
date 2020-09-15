@@ -47,7 +47,7 @@ namespace QLkho
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Doimatkhau doimk = new Doimatkhau();
-            doimk.ShowDialog();
+            doimk.Show();
         }
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -58,7 +58,7 @@ namespace QLkho
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Quyen.nhomnd == "Nhap" || Quyen.nhomnd == "Admin")
+            if (Quyen.nhomnd == "Nhập" || Quyen.nhomnd == "Admin")
             {
                 frmNhap nk = new frmNhap();
                 nk.MdiParent = this;
@@ -66,13 +66,13 @@ namespace QLkho
             }
             else
             {
-                XtraMessageBox.Show("Chỉ nhóm tài khoản Nhập mới có thể Nhập kho!!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Chỉ nhóm tài khoản Nhập và Admin mới có thể Nhập kho!!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Quyen.nhomnd == "Xuat" || Quyen.nhomnd == "Admin")
+            if (Quyen.nhomnd == "Xuất" || Quyen.nhomnd == "Admin")
             {
                 Xuatkho nk = new Xuatkho();
                 nk.MdiParent = this;
@@ -80,7 +80,7 @@ namespace QLkho
             }
             else
             {
-                XtraMessageBox.Show("Chỉ nhóm tài khoản Xuất mới có thể Xuất kho!!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Chỉ nhóm tài khoản Xuất và Admin mới có thể Xuất kho!!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -100,8 +100,15 @@ namespace QLkho
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            BackUp bk = new BackUp();
-            bk.ShowDialog();
+            if (Quyen.nhomnd == "Admin")
+            {
+                BackUp bk = new BackUp();
+                bk.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ admin mới có thể backup dữ liệu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void barButtonItem5_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -120,13 +127,67 @@ namespace QLkho
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_RPN rp1 = new frm_RPN();
-            rp1.ShowDialog();
+            if (Quyen.nhomnd == "Nhập" || Quyen.nhomnd == "Admin")
+            {
+                frm_RPN rp1 = new frm_RPN();
+                rp1.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ nhóm tài khoản nhập và Admin mới có thể quản lý hàng nhập", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (Quyen.nhomnd == "Admin" || Quyen.nhomnd == "Nhập")
+            {
+                frm_RPHN rphn = new frm_RPHN();
+                rphn.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ nhóm tài khoản nhập và Admin mới có thể quản lý hàng nhập", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Quyen.nhomnd == "Xuất" || Quyen.nhomnd == "Admin")
+            {
+                frm_RPX rp1 = new frm_RPX();
+                rp1.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ nhóm tài khoản Xuất và Admin mới có thể quản lý hàng xuất!!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Quyen.nhomnd == "Xuất" || Quyen.nhomnd == "Admin")
+            {
+                frm_RPHX rphn = new frm_RPHX();
+                rphn.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ nhóm tài khoản Xuất và Admin mới có thể quản lý hàng xuất !!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Quyen.nhomnd == "Admin")
+            {
+                Restore rs = new Restore();
+                rs.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Chỉ admin mới có thể phục hồi dữ liệu!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }        
         }
     }
 }
