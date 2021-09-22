@@ -19,13 +19,14 @@ namespace QLkho
         public QLvattu()
         {
             InitializeComponent();
+            usvt = Dangnhap.tk;
         }
 
         private void QLvattu_Load(object sender, EventArgs e)
         {
             hien();
         }
-
+        string usvt = "";
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             try
@@ -42,6 +43,8 @@ namespace QLkho
                     {
                         XtraMessageBox.Show("Thêm thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         hien();
+                        string sql2 = "insert into LichSu values('" + usvt + "',N'Thêm hàng mới: [Mã hàng]:(" +txtmavt.Text + ") || [Tên hàng]:("+txttenvt.Text+") || [Barcode]:("+txtbarcode.Text+")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                        ConnectDB.Query(sql2);
                     }
                 }
             }
@@ -71,6 +74,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Cập nhật thông tin thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + usvt + "',N'Sửa thông tin hàng có [Mã hàng]:(" + txtmavt.Text + ") thành [Tên hàng]:(" + txttenvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }
@@ -101,6 +106,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Xóa thông tin thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + usvt + "',N'Xoá hàng có [Mã hàng]:(" + txtmavt.Text + ") || [Tên hàng]:(" + txttenvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }

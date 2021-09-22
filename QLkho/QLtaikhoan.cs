@@ -19,12 +19,13 @@ namespace QLkho
         public QLtaikhoan()
         {
             InitializeComponent();
+            us = Dangnhap.tk;
         }
         private bool validate()
         {   //hàm kiểm tra dữ liệu nhập vào có rỗng hay k
-            if (txtmanv.Text == "" || txttennv.Text == "" || txtusername.Text == "" || txtpassword.Text == "")
+            if (txtmanv.Text == "" || txttennv.Text == "" || txtusername.Text == "" || txtpassword.Text == "" || cb_quyen.Text =="" || cb_tt.Text =="")
             {
-                XtraMessageBox.Show("Bạn phải điền đầy đủ các trường !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Bạn phải điền đầy đủ các thông tin tài khoản !", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -44,7 +45,7 @@ namespace QLkho
 
             
         }
-
+        string us = "";
         private void QLtaikhoan_Load(object sender, EventArgs e)
         {
             hien();
@@ -56,7 +57,7 @@ namespace QLkho
             {
                 if (validate())
                 {
-                    string sql = "insert into NhanVien values('" + txtmanv.Text + "',N'" + txttennv.Text + "','" + txtusername.Text + "','" + txtpassword.Text + "',N'" + cb_quyen.Text + "')";
+                    string sql = "insert into NhanVien values('" + txtmanv.Text + "',N'" + txttennv.Text + "','" + txtusername.Text + "','" + txtpassword.Text + "',N'" + cb_quyen.Text + "',N'"+cb_tt.Text+"')";
 
                     if (ConnectDB.Query(sql) == -1)
                     {
@@ -66,6 +67,8 @@ namespace QLkho
                     {
                         MessageBox.Show("Thêm thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         hien();
+                        string sql2 = "insert into LichSu values('" + us + "',N'Thêm tài khoản: [Mã NV]:(" + txtmanv.Text + ") || [Tên NV]:(" + txttennv.Text + ") || [username]:(" + txtusername.Text + ") || [password]:(" + txtpassword.Text + ") || [Quyền]:(" + cb_quyen.Text + ") || [Trạng thái]:(" + cb_tt.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                        ConnectDB.Query(sql2);
                     }
                 }
             }
@@ -85,7 +88,7 @@ namespace QLkho
                 {
                     if (validate())
                     {
-                        string sql = "update NhanVien set tennv = N'" + txttennv.Text + "', username ='" + txtusername.Text + "',password='" + txtpassword.Text + "',nhomnd=N'" + cb_quyen.Text + "' where manv = '" + txtmanv.Text + "'";
+                        string sql = "update NhanVien set tennv = N'" + txttennv.Text + "', username ='" + txtusername.Text + "',nhomnd=N'" + cb_quyen.Text + "', trangthai = '"+cb_tt.Text+"' where manv = '" + txtmanv.Text + "'";
 
                         if (ConnectDB.Query(sql) == -1)
                         {
@@ -95,6 +98,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Cập nhật thông tin thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + us + "',N'Update tài khoản: [Mã NV]:(" + txtmanv.Text + ") thành [Tên NV]:(" + txttennv.Text + ") || [username]:(" + txtusername.Text + ") || [Quyền]:(" + cb_quyen.Text + ") || [Trạng thái]:(" + cb_tt.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }
@@ -124,6 +129,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Xóa thông tin thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + us + "',N'Xoá tài khoản: [Mã NV]:(" + txtmanv.Text + ") || [Tên NV]:(" + txttennv.Text + ") || [username]:(" + txtusername.Text + ") || [Quyền]:(" + cb_quyen.Text + ") || [Trạng thái]:(" + cb_tt.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }
@@ -143,6 +150,7 @@ namespace QLkho
             txtusername.Text = "";
             txtpassword.Text = "";
             cb_quyen.Text = "";
+            cb_tt.Text = "";
             txtmanv.ReadOnly = false;
         }
 
@@ -154,10 +162,13 @@ namespace QLkho
         private void gridControl1_Click_1(object sender, EventArgs e)
         {
             txtmanv.ReadOnly = true;
+            txtpassword.ReadOnly = true;
             txtmanv.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "manv").ToString();
             txttennv.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "tennv").ToString();
             txtusername.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "username").ToString();
             cb_quyen.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "nhomnd").ToString();
+            cb_tt.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "trangthai").ToString();
+            txtpassword.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "password").ToString();
         }
         bool indicatorIcon = true;
         private void gridView1_CustomDrawRowIndicator_1(object sender, RowIndicatorCustomDrawEventArgs e)

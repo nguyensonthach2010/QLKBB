@@ -22,16 +22,16 @@ namespace QLkho
         private void Form1_Load(object sender, EventArgs e)
         {
             skin();
-            taikhoan = Dangnhap.tk;
-            barHeaderItem1.Caption = "Bạn đang đăng nhập với user :" + " " + taikhoan;
+            taikhoan = Dangnhap.tk; // nhận dữ liệu từ biến tk của form đăng nhập và gán 
+            barHeaderItem1.Caption = "Bạn đang đăng nhập với user :" + " " + taikhoan; 
         }
-        public static string taikhoan = "";
+        public static string taikhoan = ""; // tạo biến nhận dữ liệu của biến tk form đăng nhập
         private void skin()
         {
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            themes.LookAndFeel.SkinName = "Glass Oceans";
+            themes.LookAndFeel.SkinName = "Glass Oceans"; // cài đặt giao diện mặc định của form
         }
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -39,7 +39,8 @@ namespace QLkho
             if (tb == DialogResult.Yes)
             {
                 this.Close();
-                new Dangnhap().Visible = true;
+                Dangnhap dn = new Dangnhap();
+                dn.Show();
             }
             
         }
@@ -188,6 +189,12 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Chỉ admin mới có thể phục hồi dữ liệu!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }        
+        }
+
+        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            History hs = new History();
+            hs.Show();
         }
     }
 }

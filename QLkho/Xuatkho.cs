@@ -78,6 +78,8 @@ namespace QLkho
                             else
                             {
                                 XtraMessageBox.Show("Xuất kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                string sqll = "insert into LichSu values('" + userxuat + "',N'Xuất kho mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng xuất]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày xuất]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người xuất]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                                ConnectDB.Query(sqll);
                                 hien();
                             }
                             SqlConnection con = new SqlConnection(@"Data Source=192.168.1.53,1433;Initial Catalog=QLKhoBB;User ID=sa;Password=123456789");
@@ -106,6 +108,8 @@ namespace QLkho
                                     else
                                     {
                                         XtraMessageBox.Show("Xuất kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        string sqll = "insert into LichSu values('" + userxuat + "',N'Xuất kho mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng xuất]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày xuất]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người xuất]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                                        ConnectDB.Query(sqll);
                                         hien();
                                     }
                                 }
@@ -170,6 +174,8 @@ namespace QLkho
                     gridControl1.DataSource = ConnectDB.getTable(sql3);
                     gridControl1.ExportToXlsx(exportFilePath);
                     XtraMessageBox.Show("Xuất file Excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string sql2 = "insert into LichSu values('" + userxuat + "',N'Xuất file Excel của các mặt hàng đã xuất kho','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                    ConnectDB.Query(sql2);
                 }
             }
             catch
@@ -201,6 +207,8 @@ namespace QLkho
                     {
                         XtraMessageBox.Show("Update thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         hien();
+                        string sqll = "insert into LichSu values('" + userxuat + "',N'Sửa lại mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng xuất]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày xuất]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người xuất]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                        ConnectDB.Query(sqll);
                     }
                 }
             }
@@ -229,6 +237,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Xóa hóa đơn thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sqll = "insert into LichSu values('" + userxuat + "',N'Xoá mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng xuất]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày xuất]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người xuất]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sqll);
                         }
                     }
                 }
@@ -247,8 +257,8 @@ namespace QLkho
             {
                 txttenvt.Text = tb.Rows[0]["tenvt"].ToString().Trim();
                 txtmvt.Text = tb.Rows[0]["mavt"].ToString().Trim();
-                DialogResult dr = XtraMessageBox.Show("Barcode có trong CSDL! Bạn có muốn nhập các thông tin nhập còn lại không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
+                DialogResult dr = XtraMessageBox.Show("Chi tiết: [Mã vật tư] là : [" + tb.Rows[0]["mavt"].ToString().Trim() +"] và [Tên vật tư] : ["+ tb.Rows[0]["tenvt"].ToString().Trim() + "] ! ", "Barcode hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dr == DialogResult.OK)
                 {
                     txtmvt.Enabled = true;
                     txttenvt.Enabled = true;
@@ -263,7 +273,7 @@ namespace QLkho
             }
             else
             {
-                XtraMessageBox.Show("Không tìm thấy thông tin hàng có barcode này trong CSDL");
+                XtraMessageBox.Show("Không tìm thấy mặt hàng có barcode này trong CSDL");
             }
         }
 

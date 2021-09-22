@@ -284,7 +284,7 @@
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.ImageUrl = "D:\\ảnh\\fdac26e6.jpg";
+            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::QLkho.Properties.Resources.unnamed, true);
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(149.5713F, 120.4167F);

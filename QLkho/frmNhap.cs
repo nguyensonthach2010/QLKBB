@@ -100,6 +100,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + userthem + "',N'Nhập kho mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng nhập]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày nhập]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người nhập]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }
@@ -116,8 +118,9 @@ namespace QLkho
                 con.Close();
                 XtraReport1 rp = new XtraReport1();
                 rp.DataSource = dt;
-                rp.ShowPreviewDialog();  
-            }else
+                rp.ShowPreviewDialog();
+            }
+            else
             {
                 try
                 {
@@ -132,6 +135,8 @@ namespace QLkho
                         else
                         {
                             XtraMessageBox.Show("Nhập kho thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string sql2 = "insert into LichSu values('" + userthem + "',N'Nhập kho mặt hàng có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng nhập]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày nhập]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người nhập]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                             hien();
                         }
                     }
@@ -140,8 +145,8 @@ namespace QLkho
                 {
                     XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }    
-
+            }
+           
         }
 
         private void simpleButton4_Click_1(object sender, EventArgs e)
@@ -186,6 +191,8 @@ namespace QLkho
                     gridControl1.DataSource = ConnectDB.getTable(sql3);
                     gridControl1.ExportToXlsx(exportFilePath);
                     XtraMessageBox.Show("Xuất file Excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string sql2 = "insert into LichSu values('" + userthem + "',N'Xuất file Excel của các mặt hàng đã nhập kho','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                    ConnectDB.Query(sql2);
                 }
             }
             catch
@@ -219,6 +226,8 @@ namespace QLkho
                     {
                         XtraMessageBox.Show("Update thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         hien();
+                        string sql2 = "insert into LichSu values('" + userthem + "',N'Sửa thông tin nhập kho mặt hàng có: [Mã HĐ]:(" + txtmahd + ") thành ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng nhập]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày nhập]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người nhập]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                        ConnectDB.Query(sql2);
                     }
                 }
             }
@@ -247,6 +256,8 @@ namespace QLkho
                         {
                             XtraMessageBox.Show("Xóa hóa đơn thành công (^-^)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             hien();
+                            string sql2 = "insert into LichSu values('" + userthem + "',N'Xoá hoá đơn có: [Mã HĐ]:(" + txtmahd + ") ||[Mã hàng]:(" + txtmvt.Text + ") || [Barcode]:(" + txtbarcode.Text + ") || [Số lượng nhập]:(" + txtslnhap.Text + ") || [Đơn vị tính]:(" + txtdvtinh.Text + ") || [Ngày nhập]:(" + Convert.ToDateTime(date_nhap.Text).ToString("dd/MM/yyyy HH:mm:ss") + ") || [Người nhập]:(" + cb_user.EditValue.ToString() + ") || [Đơn vị giao nhận]:(" + txtdvgiaonhan.Text + ")','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                            ConnectDB.Query(sql2);
                         }
                     }
                 }
@@ -265,8 +276,8 @@ namespace QLkho
             {
                 txttenvt.Text = tb.Rows[0]["tenvt"].ToString().Trim();
                 txtmvt.Text = tb.Rows[0]["mavt"].ToString().Trim();
-                DialogResult dr = XtraMessageBox.Show("Barcode có trong CSDL! Bạn có muốn nhập các thông tin nhập còn lại không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
+                DialogResult dr = XtraMessageBox.Show("Chi tiết: [Mã vật tư] là : [" + tb.Rows[0]["mavt"].ToString().Trim() + "] và [Tên vật tư] : [" + tb.Rows[0]["tenvt"].ToString().Trim() + "] ! ", "Barcode hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
                 {
                     txtmvt.Enabled = true;
                     txttenvt.Enabled = true;
@@ -277,7 +288,7 @@ namespace QLkho
                     txtdvgiaonhan.Enabled = true;
                     cb_user.Enabled = true;
                     date_nhap.Enabled = true;
-                }    
+                }
             }
             else
             {
@@ -297,6 +308,7 @@ namespace QLkho
             XtraReport1 rp = new XtraReport1();
             rp.DataSource = dt;
             rp.ShowPreviewDialog();
+
         }
         bool indicatorIcon = true;
 

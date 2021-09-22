@@ -26,8 +26,7 @@ namespace QLkho
             }
             return true;
         }
-        public static string tk = "";
-
+        public static string tk = ""; // tạo biến public để truyền tham số của biến username sang các form khác
         private void btn_dn_Click(object sender, EventArgs e)
         {
             try
@@ -43,13 +42,20 @@ namespace QLkho
                         XtraMessageBox.Show("Sai tài khoản hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else  //nếu số dòng lấy được > 0 thì :
+                        if(data.Rows[0]["trangthai"].ToString() == "Active") // kiểm tra dữ liệu cột trạng thái trong sql nếu là Active thì mới được quyền truy cập
+                        {
+                            XtraMessageBox.Show("Đăng nhập thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Quyen.nhomnd = data.Rows[0]["nhomnd"].ToString();
+                            ;
+                            tk = txtusername.Text;
+                            this.Visible = false;  //cho form này ẩn đi
+                            new Form1().ShowDialog();  //hiện form chinh
+                            string sql1 = "insert into LichSu values('" + txtusername.Text + "','Login','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')"; // thêm lich sử hoạt động là Login của username vào bảng lịch sử User
+                            ConnectDB.Query(sql1);
+                        }else
                     {
-                        XtraMessageBox.Show("Đăng nhập thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Quyen.nhomnd = data.Rows[0]["nhomnd"].ToString();
-                        tk = txtusername.Text;
-                        this.Visible = false;  //cho form này ẩn đi
-                        new Form1().ShowDialog();  //hiện form chinh
-                    }
+                        XtraMessageBox.Show("Tài khoản này hiện đang bị khoá. Liên hệ admin để mở khoá tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }    
                 }
 
             }
@@ -69,7 +75,7 @@ namespace QLkho
 
         private void Dangnhap_Load(object sender, EventArgs e)
         {
-            DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel(); // cài đặt giao diện mặc định cho form
             themes.LookAndFeel.SkinName = "Glass Oceans";
         }
     }

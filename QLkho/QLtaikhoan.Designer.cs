@@ -38,6 +38,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cb_tt = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtmanv = new DevExpress.XtraEditors.TextEdit();
             this.cb_quyen = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtpassword = new DevExpress.XtraEditors.TextEdit();
@@ -51,6 +52,7 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,12 +61,14 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_tt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmanv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_quyen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpassword.Properties)).BeginInit();
@@ -78,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -176,6 +181,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cb_tt);
             this.layoutControl1.Controls.Add(this.txtmanv);
             this.layoutControl1.Controls.Add(this.cb_quyen);
             this.layoutControl1.Controls.Add(this.txtpassword);
@@ -188,6 +194,19 @@
             this.layoutControl1.Size = new System.Drawing.Size(1071, 120);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cb_tt
+            // 
+            this.cb_tt.Location = new System.Drawing.Point(383, 84);
+            this.cb_tt.Name = "cb_tt";
+            this.cb_tt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cb_tt.Properties.Items.AddRange(new object[] {
+            "Active",
+            "Block"});
+            this.cb_tt.Size = new System.Drawing.Size(88, 20);
+            this.cb_tt.StyleController = this.layoutControl1;
+            this.cb_tt.TabIndex = 8;
             // 
             // txtmanv
             // 
@@ -257,7 +276,8 @@
             this.emptySpaceItem1,
             this.emptySpaceItem2,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1054, 128);
             this.Root.TextVisible = false;
@@ -337,9 +357,19 @@
             this.layoutControlItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem5.ImageOptions.Image")));
             this.layoutControlItem5.Location = new System.Drawing.Point(257, 36);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(206, 72);
+            this.layoutControlItem5.Size = new System.Drawing.Size(206, 36);
             this.layoutControlItem5.Text = "Nhóm tài khoản";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(111, 32);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.cb_tt;
+            this.layoutControlItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem6.ImageOptions.Image")));
+            this.layoutControlItem6.Location = new System.Drawing.Point(257, 72);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(206, 36);
+            this.layoutControlItem6.Text = "Trạng thái";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(111, 32);
             // 
             // panelControl3
             // 
@@ -369,7 +399,8 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupPanelText = "Danh sách tài khoản";
             this.gridView1.Name = "gridView1";
@@ -435,6 +466,16 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn6.Caption = "Trạng thái";
+            this.gridColumn6.FieldName = "trangthai";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
+            // 
             // QLtaikhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +496,7 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cb_tt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmanv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_quyen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpassword.Properties)).EndInit();
@@ -468,6 +510,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -508,5 +551,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.ComboBoxEdit cb_tt;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

@@ -20,7 +20,7 @@ namespace QLkho
         ConnectDB con = new ConnectDB();
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            FolderBrowserDialog dlg = new FolderBrowserDialog(); //mở đường dẫn khi click vào nút Brownse
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 textEdit11.Text = dlg.SelectedPath;
@@ -38,7 +38,7 @@ namespace QLkho
                 }
                 else
                 {
-                    string sql =  "BACKUP DATABASE [QLKhoBB] TO DISK ='"+textEdit11.Text+"\\"+"DATABASE"+"-"+DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") +".bak'";
+                    string sql =  "BACKUP DATABASE [QLKhoBB] TO DISK ='"+textEdit11.Text+"\\"+"DATABASE"+"-"+DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") +".bak'";  //thực thi câu lệnh backup khi nhấn nút backup
                     ConnectDB.Query(sql);
                     XtraMessageBox.Show("Back up dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     simpleButton2.Enabled = false;
@@ -47,11 +47,6 @@ namespace QLkho
             {
                 XtraMessageBox.Show("Có lỗi xảy ra!. ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void BackUp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

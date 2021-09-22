@@ -20,8 +20,9 @@ namespace QLkho
         public Import()
         {
             InitializeComponent();
+            userthem = Dangnhap.tk;
         }
-
+        string userthem = "";
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -104,7 +105,9 @@ namespace QLkho
                 if (tb == DialogResult.OK)
                 {
                     this.Close();
-                }    
+                }
+                string sql2 = "insert into LichSu values('" + userthem + "',N'Import file Excel vào nhập kho','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "')";
+                ConnectDB.Query(sql2);
             }
             catch 
             {

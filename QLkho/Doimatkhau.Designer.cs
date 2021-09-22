@@ -130,6 +130,7 @@
             // 
             this.txtxacnhan.Location = new System.Drawing.Point(12, 224);
             this.txtxacnhan.Name = "txtxacnhan";
+            this.txtxacnhan.Properties.UseSystemPasswordChar = true;
             this.txtxacnhan.Size = new System.Drawing.Size(295, 20);
             this.txtxacnhan.StyleController = this.layoutControl1;
             this.txtxacnhan.TabIndex = 4;
@@ -138,6 +139,7 @@
             // 
             this.txtpassmoi.Location = new System.Drawing.Point(12, 165);
             this.txtpassmoi.Name = "txtpassmoi";
+            this.txtpassmoi.Properties.UseSystemPasswordChar = true;
             this.txtpassmoi.Size = new System.Drawing.Size(295, 20);
             this.txtpassmoi.StyleController = this.layoutControl1;
             this.txtpassmoi.TabIndex = 4;
@@ -146,6 +148,7 @@
             // 
             this.txtpassht.Location = new System.Drawing.Point(12, 106);
             this.txtpassht.Name = "txtpassht";
+            this.txtpassht.Properties.UseSystemPasswordChar = true;
             this.txtpassht.Size = new System.Drawing.Size(295, 20);
             this.txtpassht.StyleController = this.layoutControl1;
             this.txtpassht.TabIndex = 4;
@@ -154,6 +157,7 @@
             // 
             this.txtuser.Location = new System.Drawing.Point(12, 47);
             this.txtuser.Name = "txtuser";
+            this.txtuser.Properties.ReadOnly = true;
             this.txtuser.Size = new System.Drawing.Size(295, 20);
             this.txtuser.StyleController = this.layoutControl1;
             this.txtuser.TabIndex = 4;
